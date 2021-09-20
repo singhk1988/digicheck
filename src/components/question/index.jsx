@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Button } from 'antd'
-import Start from '../start'
-import Funktionen from '../funktionen_2/index'
-
+import React, { useState, useRef, useEffect } from "react";
+import { Button } from "antd";
+import Start from "../start";
+import Funktionen from "../funktionen_2/index";
+import questions from "../../Questions.json";
 function Question() {
   // const [activeStep, setActiveStep] = useState(0)
   // let body = ''
@@ -21,10 +21,12 @@ function Question() {
   //   const prevStep = activeStep - 1
   //   setActiveStep(prevStep > 0 ? prevStep : 0)
   // }
+
+  let data = questions.data.definition.data.clusters;
   return (
     <div>
       <Start />
-      <Funktionen />
+      {/* <Funktionen /> */}
       {/* <div className="actions">
         <Button onClick={onClickReturn}>Zurück</Button>
         <Button
@@ -41,7 +43,7 @@ function Question() {
         </Button>
       </div> */}
     </div>
-  )
+  );
 }
 
-export default Question
+export default Question;
