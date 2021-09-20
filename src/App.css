@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.ant-btn-primary:active {
+  color: #fff;
+  border-color: #000 !important;
+  background: #000 !important;
+}
+
+.ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background: #000 !important;
+  border-color: #000 !important;
+}
+
+.ant-radio-button-wrapper:first-child {
+  border-left: 1px solid #000 !important;
+  border-radius: 10px 0 0 10px !important;
+}
+
+.ant-radio-button-wrapper:last-child {
+  border-radius: 0px 10px 10px 0px !important;
+}
+
+.ant-radio-button-wrapper:hover {
+  position: relative;
+  color: #ababab !important;
+}
+
+.ant-radio-button-wrapper {
+  border: 1px solid #000;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active:before {
+  background-color: #000 !important;
+}
