@@ -1,37 +1,37 @@
-import React from 'react'
-import { Row, Col, Table, Space, Radio } from 'antd'
-import './styles.css'
+import React from "react";
+import { Row, Col, Table, Space, Radio } from "antd";
+import "./styles.css";
 
 function RadioButton() {
-  const { Column, ColumnGroup } = Table
+  const { Column, ColumnGroup } = Table;
   const data = [
     {
-      key: '1',
-      firstName: 'DATEV.de/upload',
+      key: "1",
+      firstName: "DATEV.de/upload",
     },
     {
-      key: '2',
-      firstName: 'DATEV Upload Mail nach jeweiligem Belegtyp',
+      key: "2",
+      firstName: "DATEV Upload Mail nach jeweiligem Belegtyp",
     },
     {
-      key: '3',
-      firstName: 'DATEV Upload Mobile App',
+      key: "3",
+      firstName: "DATEV Upload Mobile App",
     },
     {
-      key: '4',
-      firstName: 'DATEV Belegtransfer online',
+      key: "4",
+      firstName: "DATEV Belegtransfer online",
     },
     {
-      key: '5',
-      firstName: 'DATEV Connected online',
+      key: "5",
+      firstName: "DATEV Connected online",
     },
-  ]
-  const [value, setValue] = React.useState()
+  ];
+  const [value, setValue] = React.useState();
 
   const onChange = (e) => {
-    console.log('radio checked', e.target.value)
-    setValue(e.target.value)
-  }
+    console.log("radio checked", e.target.value);
+    setValue(e.target.value);
+  };
 
   return (
     <div>
@@ -44,12 +44,16 @@ function RadioButton() {
                 Möglichkeiten, Belege in DATEV Unternehmen Online hochzuladen?
               </span>
             </div>
-            <span style={{ marginLeft: '20%' }}>
+            <span style={{ marginLeft: "20%" }}>
               (1=weinger vertraut,5=sehr vertraut)
             </span>
             <Col>
               <div className="radio_table">
-                <Table dataSource={data} style={{ fontSize: '10px' }}>
+                <Table
+                  pagination={false}
+                  dataSource={data}
+                  style={{ fontSize: "10px" }}
+                >
                   <ColumnGroup>
                     <Column title="" dataIndex="firstName" key="firstName" />
                   </ColumnGroup>
@@ -74,7 +78,7 @@ function RadioButton() {
         </Col>
       </Row>
     </div>
-  )
+  );
 }
 
-export default RadioButton
+export default RadioButton;
