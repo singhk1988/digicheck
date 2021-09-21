@@ -1,0 +1,26 @@
+.select_container {
+  position: relative;
+  top: 10rem;
+  /* background-color: cadetblue; */
+}
+.select_title {
+  width: 60%;
+  margin: auto;
+  font-size: 29px;
+  font-weight: 700;
+  text-align: justify;
+  word-spacing: -4px;
+}
+
+.select_click {
+  margin: auto;
+}
+.ant-checkbox-inner {
+  width: 30px;
+  height: 30px;
+}
+
+.ant-checkbox + span {
+  font-size: 16px;
+  font-weight: 500;
+}
