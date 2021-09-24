@@ -70,3 +70,8 @@
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active:before {
   background-color: #000 !important;
 }
+
+.ant-checkbox-inner {
+  width: 18px !important;
+  height: 20px !important;
+}
