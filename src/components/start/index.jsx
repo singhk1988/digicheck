@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button, Row, Col, Layout } from "antd";
-import {
-  ArrowDownOutlined,
-  ArrowUpOutlined,
-  UpOutlined,
-  DownOutlined,
-} from "@ant-design/icons";
+import { Button, Row, Col, Layout, Checkbox } from "antd";
+import { ArrowDownOutlined, UpOutlined, DownOutlined } from "@ant-design/icons";
 import "./styles.css";
 import questions from "../../Questions.json";
 import { Radio } from "antd";
@@ -16,7 +11,6 @@ function Start() {
   const [mainIndex, setmainIndex] = useState(0);
   const [answer, setanswer] = useState([]);
   let data = questions.data.definition.data.clusters;
-
   useEffect(() => {
     let da = data[mainIndex].nodes.map((d) => {
       return { name: d.name, id: d.id };
@@ -24,17 +18,17 @@ function Start() {
     setanswer([...answer, ...da]);
   }, [data, mainIndex]);
 
-  // console.log(`answer[dataIndex].answer::::`, answer[dataIndex].answer);
   return (
     <div>
       <Row>
         <Col span={24} className="start_title">
-          <div style={{ marginLeft: "20%", marginRight: "20%" }}>
+          <div className="question-container">
             <h2 className="question">
               {data[mainIndex].nodes[dataIndex].name}
             </h2>
             <h3>{data[mainIndex].nodes[dataIndex].description}</h3>
-            <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+            {/* For Scale type Questions */}
+            <div className="single-question-container">
               {data[mainIndex].nodes[dataIndex] &&
               data[mainIndex].nodes[dataIndex].block &&
               data[mainIndex].nodes[dataIndex].block.type &&
@@ -69,15 +63,122 @@ function Start() {
               ) : null}
             </div>
 
-            <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+            {/* For Matrix Based Questions */}
+
+            {data[mainIndex].nodes[dataIndex] &&
+            data[mainIndex].nodes[dataIndex].block &&
+            data[mainIndex].nodes[dataIndex].block.type &&
+            data[mainIndex].nodes[dataIndex].block.type ===
+              "tripetto-block-matrix" ? (
+              <div>
+                <div className="matrix-index-title">
+                  {data[mainIndex].nodes[dataIndex].block.columns.map(
+                    (u, i) => {
+                      return <span className="matrix-index">{u.label}</span>;
+                    }
+                  )}
+                </div>
+                {data[mainIndex].nodes[dataIndex].block.rows.map((u, i) => {
+                  let ans = answer.filter(function (x) {
+                    return x.id === data[mainIndex].nodes[dataIndex].id;
+                  })[0];
+
+                  return (
+                    <div className="matrix-radio-container">
+                      <p className="matrix-radio-option-title">{u.name}</p>
+                      <Radio.Group
+                        onChange={(e) => {
+                          let newArray = [...answer];
+                          let d = newArray.filter(function (x) {
+                            return x.id === data[mainIndex].nodes[dataIndex].id;
+                          })[0];
+                          if (d.answer) {
+                            const ans = d.answer;
+                            d.answer = { ...ans, [u.id]: e.target.value };
+                          } else {
+                            d.answer = { [u.id]: e.target.value };
+                          }
+                          setanswer([...newArray]);
+                        }}
+                        value={ans && ans.answer && ans.answer[u.id]}
+                      >
+                        {data[mainIndex].nodes[dataIndex].block.columns.map(
+                          (u, i) => {
+                            return (
+                              <Radio
+                                className="matrix-radio"
+                                value={u.label}
+                              ></Radio>
+                            );
+                          }
+                        )}
+                      </Radio.Group>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
+
+            {/* For Checkbox type Questions */}
+
+            <div className="single-question-container">
+              {data[mainIndex].nodes[dataIndex] &&
+              data[mainIndex].nodes[dataIndex].block &&
+              data[mainIndex].nodes[dataIndex].block.type &&
+              data[mainIndex].nodes[dataIndex].block.type ===
+                "tripetto-block-checkboxes" ? (
+                <Row>
+                  {data[mainIndex].nodes[dataIndex].block.checkboxes.map(
+                    (u, i) => {
+                      let ans = answer.filter(function (x) {
+                        return x.id === data[mainIndex].nodes[dataIndex].id;
+                      })[0];
+
+                      return (
+                        <Col span={16}>
+                          <Checkbox
+                            onChange={(e) => {
+                              let newArray = [...answer];
+                              let d = newArray.filter(function (x) {
+                                return (
+                                  x.id === data[mainIndex].nodes[dataIndex].id
+                                );
+                              })[0];
+
+                              if (d.answer) {
+                                const ans = d.answer;
+                                d.answer = {
+                                  ...ans,
+                                  [u.name]: e.target.checked,
+                                };
+                              } else {
+                                d.answer = { [u.name]: e.target.checked };
+                              }
+
+                              setanswer([...newArray]);
+                            }}
+                            value={u.name}
+                            checked={ans && ans.answer && ans.answer[u.name]}
+                          >
+                            {u.name}
+                          </Checkbox>
+                        </Col>
+                      );
+                    }
+                  )}
+                </Row>
+              ) : null}
+            </div>
+
+            {/* for Multiple Choice type question */}
+
+            <div className="single-question-container">
               {data[mainIndex].nodes[dataIndex] &&
               data[mainIndex].nodes[dataIndex].block &&
               data[mainIndex].nodes[dataIndex].block.type &&
               data[mainIndex].nodes[dataIndex].block.type ===
                 "tripetto-block-multiple-choice" ? (
-                <div
-                  style={{ display: "inline-flex", flexDirection: "column" }}
-                >
+                <div className="multiple-choice-container">
                   {data[mainIndex].nodes[dataIndex].block.choices.map(
                     (u, i) => {
                       let ans = answer.filter(function (x) {
@@ -93,6 +194,7 @@ function Start() {
                               );
                             })[0];
                             d.answer = u.name;
+                            d.answerId = u.id;
                             setanswer([...newArray]);
                           }}
                           className={
@@ -140,7 +242,7 @@ function Start() {
                     setdataIndex(data[mainIndex - 1].nodes.length - 1);
                   }
                 }}
-                style={{ marginRight: "20px" }}
+                className="next-button-icon"
                 icon={<UpOutlined />}
               ></Button>
               <Button
