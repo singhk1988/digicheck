@@ -1,0 +1,12 @@
+.start-btn{
+    width: 111px;
+    height: 51px;
+    border-radius: 14px;
+    font-size: 21px;
+    margin-top: 10px;
+}
+.checkbox-opt{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+}
