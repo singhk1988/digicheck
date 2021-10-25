@@ -4,6 +4,7 @@ import { Button, Checkbox } from 'antd';
 import "../../question/styles.css";
 import {RightOutlined} from '@ant-design/icons';
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
+import OptionOneStepOne from "./option_one_step_one";
 
 const OptionOne=props=> {
     
@@ -13,14 +14,16 @@ const OptionOne=props=> {
     setAhead(true);
     console.log('ahead status:',ahead);
   }
-  const moveNotahead=()=>{
-    setAhead(false);
-    console.log(ahead);
-  }
+  
   const [values,setValues]=useState([]);
   const onChange=(checkedValues)=> {
     console.log('checked = ', checkedValues);
     setValues(checkedValues);
+  }
+  const moveNotahead=()=>{
+    setAhead(false);
+    setValues([]);
+    console.log(ahead);
   }
   return (
     <div>
@@ -47,8 +50,8 @@ const OptionOne=props=> {
      <Checkbox value="Sonstiges" className="checkbox-opt">Sonstiges</Checkbox>
      <br></br>
      </Checkbox.Group>
-     {values.length===0?(<Button className="start-btn" style={{width:122}} disabled icon={<ArrowDownOutlined />}>Weiter</Button>):(<Button className="start-btn" style={{width:122}} icon={<ArrowDownOutlined onClick={moveAhead} />}>Weiter</Button>)}
-    </div>):(<div>hello</div>)}
+     {values.length===0?(<Button className="start-btn" style={{width:122}} disabled icon={<ArrowDownOutlined />}>Weiter</Button>):(<Button className="start-btn" style={{width:122}} icon={<ArrowDownOutlined  />} onClick={moveAhead}>Weiter</Button>)}
+    </div>):(<OptionOneStepOne moveBack={moveNotahead}/>)}
          
     </div>
   );
