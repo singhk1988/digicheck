@@ -4,18 +4,19 @@ import { Button, Checkbox } from 'antd';
 import "../../question/styles.css";
 import {RightOutlined} from '@ant-design/icons';
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
+import OptionThreeStepOne from "./option_three_step_one";
 
 const OptionThree=props=> {
     
-  const [forward, setForward]=useState(false);
+  const [forwardThird, setForwardThird]=useState(false);
   // const [backward, setBackward]=useState(false);
-  const moveForward=()=>{
-    setForward(true);
-    console.log(forward);
+  const moveForwardThird=()=>{
+    setForwardThird(true);
+    console.log(forwardThird);
   }
-  const moveBackward=()=>{
-    setForward(false);
-    console.log(forward);
+  const moveBackwardThird=()=>{
+    setForwardThird(false);
+    console.log(forwardThird);
   }
   const [values,setValues]=useState([]);
   const onChange=(checkedValues)=> {
@@ -23,7 +24,8 @@ const OptionThree=props=> {
     setValues(checkedValues);
   }
   return (
-    <div>
+    <div>{forwardThird===false?(
+<div>
          <Button type="link"
       className="start-btn"
       onClick={props.moveBack}
@@ -32,7 +34,10 @@ const OptionThree=props=> {
         </Button>
      <h1>Kommen wir zu generellen Fragen</h1>
      
-    <Button className="start-btn" style={{width:122}} icon={<ArrowDownOutlined />}>Weiter</Button>
+    <Button className="start-btn" style={{width:122}} icon={<ArrowDownOutlined />} onClick={moveForwardThird}>Weiter</Button>
+    </div>
+    ):(<OptionThreeStepOne moveBack={moveBackwardThird}/>)}
+      
     </div>
   );
 }

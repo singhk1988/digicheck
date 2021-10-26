@@ -4,27 +4,30 @@ import { Button, Checkbox } from 'antd';
 import "../../question/styles.css";
 import {RightOutlined} from '@ant-design/icons';
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
+import OptionTwoStepOne from "./option_two_step_one";
 
 const OptionTwo=props=> {
     
-  const [forward, setForward]=useState(false);
+  const [direction, setDirection]=useState(false);
   // const [backward, setBackward]=useState(false);
-  const moveForward=()=>{
-    setForward(true);
-    console.log(forward);
+  const move=()=>{
+    setDirection(true);
+    console.log(direction);
   }
-  const moveBackward=()=>{
-    setForward(false);
-    console.log(forward);
-  }
+  
   const [values,setValues]=useState([]);
   const onChange=(checkedValues)=> {
     console.log('checked = ', checkedValues);
     setValues(checkedValues);
   }
+  const back=()=>{
+    setDirection(false);
+    setValues([]);
+    console.log(direction);
+  }
   return (
-    <div>
-         <Button type="link"
+    <div>{direction===false?(<div>
+<Button type="link"
       className="start-btn"
       onClick={props.moveBack}
       >
@@ -46,7 +49,9 @@ const OptionTwo=props=> {
      <Checkbox value="Sonstiges" className="checkbox-opt">Sonstiges</Checkbox>
      <br></br>
      </Checkbox.Group>
-     {values.length===0?(<Button className="start-btn" style={{width:122}} disabled icon={<ArrowDownOutlined />}>Weiter</Button>):(<Button className="start-btn" style={{width:122}} icon={<ArrowDownOutlined />}>Weiter</Button>)}
+     {values.length===0?(<Button className="start-btn" style={{width:122}} disabled icon={<ArrowDownOutlined />}>Weiter</Button>):(<Button className="start-btn" style={{width:122}} icon={<ArrowDownOutlined />} onClick={move}>Weiter</Button>)}
+    </div>):(<OptionTwoStepOne moveBack={back}/>)}
+         
     </div>
   );
 }
