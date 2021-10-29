@@ -5,17 +5,23 @@ import "../start/styles.css";
 import questions from "../../Questions.json";
 import { Radio } from "antd";
 import Seventh from "../Ja/seventh_step_scale_Ja/index";
+import Nineth from "../Ja/ninth_step_Ja";
 
 const Sixth=props=> {
   
 const [buttonOption,setButtonoption]=useState('');
 const [forward,setForward]=useState(false);
+const [ahead,setAhead]=useState(false);
+const noAhead=()=>
+{
+  setAhead(false);
+}
 const moveBack=()=>
 {
   setForward(false);
 }
   return (
-    <div>{forward===false?(
+    <div>{forward===false && ahead===false?(
       <Row>
       <Col span={24} className="start_title">
         <div className="question-container">
@@ -43,6 +49,7 @@ const moveBack=()=>
                       <button
                       onClick={() => {
                           setButtonoption('Nein');
+                          setAhead(true);
                         }}
                         className={
                             buttonOption=='Nein'?
@@ -73,7 +80,13 @@ const moveBack=()=>
         </div>
       </Col>
     </Row>
-    ):(<Seventh moveBack={moveBack}/>)}
+    ):(<>{forward===true && ahead===false?(
+<Seventh moveBack={moveBack}/>
+    ):(
+      <Nineth moveBack={noAhead}/>
+    )}
+    </>
+    )}
      
       
      
