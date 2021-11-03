@@ -8,7 +8,7 @@
                 "type":"text",
                 "nextButton":true,
                 "backButton":false,
-                "parentID":[0],
+                "parentID":0,
                 "childID":2
             },
             {
@@ -18,7 +18,7 @@
                 "type":"text",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":[1],
+                "parentID":1,
                 "childID":3
             },
             {
@@ -26,9 +26,9 @@
                 "question":"Wie viel Prozent der Belege Ihrer Mandanten für die Finanzbuchhaltung erhalten Sie bereits digital?",
                 "description":null,
                 "type":"scale",
-                "nextButton":true,
+                "nextButton":false,
                 "backButton":true,
-                "parentID":[2],
+                "parentID":2,
                 "childID":4,
                 "scale":{
                     "low":0,
@@ -40,9 +40,9 @@
                 "question":"Wie groß ist der Anteil der Finanzbuchhaltungen, die in Ihrer Kanzlei vollständig digital erstellt werden?",
                 "description":"Vollständig digitale Erstellung, ohne Kontierung auf Papierbelegen",
                 "type":"scale",
-                "nextButton":true,
+                "nextButton":false,
                 "backButton":true,
-                "parentID":[3],
+                "parentID":3,
                 "childID":5,
                 "scale":{
                     "low":0,
@@ -56,7 +56,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[4],
+                "parentID":4,
                 "options":
                 [
                     {
@@ -76,27 +76,30 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[5],
+                "parentID":5,
                 "options":
                 [
                     {
+                        "optionID":1,
                         "option":"Ja",
                         "childID":7
                     },
                     {
+                        "optionID":2,
                         "option":"Nein",
-                        "childID":9
+                        "childID":25
                     }
                 ]
             },
             {
+                
                 "id":7,
                 "question":"Wie hoch schätzen Sie die den Grad der Standardisierung in diesem Prozess?",
                 "description":null,
                 "type":"scale",
-                "nextButton":true,
+                "nextButton":false,
                 "backButton":true,
-                "parentID":[6],
+                "parentID":6,
                 "childID":8,
                 "scale":{
                     "low":0,
@@ -108,9 +111,9 @@
                 "question":"Wie hoch schätzen Sie die den Grad der Automatisierung in diesem Prozess?",
                 "description":null,
                 "type":"scale",
-                "nextButton":true,
+                "nextButton":false,
                 "backButton":true,
-                "parentID":[7],
+                "parentID":7,
                 "childID":9,
                 "scale":{
                     "low":0,
@@ -118,13 +121,14 @@
                 } 
             },
             {
+                "optionID":1,
                 "id":9,
-                "question":"Haben Sie einen standardisierten / Automatisierten Prozess für das Onboarding von Mandanten in DATEV Unternehmen Online?",
+                "question":"Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
                 "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[6,8],
+                "parentID":8,
                 "options":
                 [
                     {
@@ -144,7 +148,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[9],
+                
                 "options":
                 [
                     {
@@ -164,7 +168,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[10],
+                "parentID":10,
                 "options":
                 [
                     {
@@ -184,7 +188,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[11],
+                "parentID":11,
                 "options":
                 [
                     {
@@ -204,7 +208,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[12],
+                "parentID":12,
                 "options":
                 [
                     {
@@ -224,7 +228,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[13],
+                "parentID":13,
                 "options":
                 [
                     {
@@ -244,7 +248,7 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[14],
+                "parentID":14,
                 "options":
                 [
                     {
@@ -264,16 +268,240 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":[15],
+                "parentID":15,
                 "options":
                 [
                     {
                         "option":"Ja",
-                        "childID":14
+                        "childID":17
                     },
                     {
                         "option":"Nein",
-                        "childID":14
+                        "childID":17
+                    }
+                ]
+            },
+            {
+                "id":17,
+                "question":"Funktionen Mandant",
+                "description":null,
+                "type":"text",
+                "nextButton":true,
+                "backButton":true,
+                "parentID":16,
+                "childID":18
+            },
+            {
+                "id":18,
+                "question":"Nutzen Mandanten die digitale Personalakte in DATEV Unternehmen Online?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "parentID":17,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":19
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":19
+                    }
+                ]
+            },
+            {
+                "id":19,
+                "question":"Welche Art der Belegerfassung nutzen Ihre Mandanten hauptsächlich in DATEV Unternehmen Online?",
+                "description":"bifurcation",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "parentID":18,
+                "options":
+                [
+                    {
+                        "optionID":3,
+                        "option":"Belegerfassung Standard",
+                        "childID":20
+                    },
+                    {
+                        "optionID":4,
+                        "option":"Belegerfassung Erweitert",
+                        "childID":21
+                    }
+                ]
+            },
+            {
+                "optionID":3,
+                "id":20,
+                "question":"Was sind die Hauptgründe, warum Ihre Mandanten hauptsächlich die Belegerfassung Standard nutzen?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "parentID":19,
+                "childID":24,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Sorge, dass Belege falsch / nicht korrekt erfasst und zugeordnet werden"
+                    },
+                    {
+                        "option":"Mandant ist die Funktion \"Belegerfassung Erweitert\" nicht bekannt"
+                    },
+                    {
+                        "option":"Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "optionID":4,
+                "id":21,
+                "question":"Wird von Ihren Mandanten das Kassenbuch online zur Vorerfassung von Kassenbewegungen genutzt?",
+                "description":"bifurcation",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "parentID":19,
+                "options":
+                [
+                    {
+                        "optionID":5,
+                        "option":"Ja",
+                        "childID":22
+                    },
+                    {
+                        "optionID":6,
+                        "option":"Nein",
+                        "childID":23
+                    }
+                ]
+            },
+            {
+                "optionID":5,
+                "id":22,
+                "question":"Wie groß ist in etwa der Anteil der Mandanten, die das Kassenbuch online nutzen?",
+                "description":null,
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "parentID":21,
+                "childID":26,
+                "scale":{
+                    "low":0,
+                    "high":10
+                } 
+            },
+            {
+                "optionID":6,
+                "id":23,
+                "question":"Was sind die Hauptgründe, warum Ihre Mandanten das Kassenbuch online nicht nutzen?",
+                "description":null,
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "parentID":21,
+                "childID":26,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Vorsystem des Mandanten erfasst Kassenbewegungen"
+                    },
+                    {
+                        "option":"Mandant ist die Funktion \"Kassenbuch online\" nicht bekannt"
+                    },
+                    {
+                        "option":"Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":24,
+                "question":"Nutzen Mandanten hauptsächlich ein zentrales Medium, um Rechnungen digital zu empfangen?",
+                "description":"z.B. eine einheitliche E-Mail Adresse",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja"
+                    },
+                    {
+                        "option":"Nein"
+                    }
+                ]
+            },
+            {
+                "optionID":2,
+                "id":25,
+                "question":"Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "parentID":6,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":10
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":10
+                    }
+                ]
+            },
+            {
+                "id":26,
+                "question":"Wie erfolgt die Abwicklung des Zahlungsverkehrs bei Ihren Mandanten?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":27,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Durch den Mandanten selbst über DATEV Unternehmen Online"
+                    },
+                    {
+                        "option":"Durch die Kanzlei über den DATEV Zahlungsverkehr"
+                    },
+                    {
+                        "option":"Durch Drittanwendungen des Mandanten außerhalb von DATEV"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":27,
+                "question":"Haben Sie Ihre Mandanten auf die Möglichkeit zur Kostenstellenrechnung in der erweiterten Belegerfassung aufmerksam gemacht?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "parentID":26,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":24
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":24
                     }
                 ]
             }

@@ -7,26 +7,67 @@ import { Radio } from "antd";
 
 function Question() {
   const { Footer } = Layout;
-//   const [dataIndex, setdataIndex] = useState(0);
-//   const [mainIndex, setmainIndex] = useState(0);
-//   const [answer, setanswer] = useState([]);
+  var pages=[0];
+
+const [checkedValues,setcheckedValues]=useState([]);
+const[optionID,setOptionID]=useState('');
+const onChangeChecked=(checkedValues)=> {
+  console.log('checked = ', checkedValues);
+  setcheckedValues(checkedValues);
+}
   let data = questions.questions.steps;
+  const [radioOption,setRadiooption]=useState(''); 
+  const [buttonOption,setButtonoption]=useState('');
   console.log(data);
   const [question,setQuestion]=useState(0);
   const[option,setOption]=useState('');
-  console.log(data[question].parentID[0]===0);
+  const arr=[0,1,2,3,4,5,6,7,8,9,10];
+  console.log('pages:')
   const moveForward=()=>
   { if(data[question].childID)
     {
+      // console.log("question past",data[question].id-1);
         setQuestion(data[question].childID-1);
+        // console.log("question",data[question].childID);
+        pages.push(data[question].childID-1);
     }
-    //   else{
-    //       setQuestion()
-    //   }
+    console.log("question_parent",question);
   }
   const moveBack=()=>
   {
-      setQuestion(data[question].childID-1);
+    if(data[question].parentID)
+    {
+      console.log("question past",data[question].id-1);
+      setQuestion(data[question].parentID-1);
+      // console.log("question_back",data[question].parentID);
+      setRadiooption('');
+
+    }
+    else{
+      if(optionID!='')
+      {
+        console.log("optionid",optionID);
+        const optionLocation=data.find(item => {
+          return item["optionID"] === optionID
+        })
+          console.log("questionID",optionLocation["id"]-1);
+          setQuestion(optionLocation["id"]-1);
+      }
+     
+    }
+    
+    
+    
+    
+    
+    
+      
+  }
+  const onChange=(e)=> {
+    console.log(`radio checked:${e.target.value}`);
+    setRadiooption(e.target.value);
+    setQuestion(data[question].childID-1);
+    console.log("question",data[question].childID);
   }
 //   useEffect(() => {
 //     let da = data[mainIndex].nodes.map((d) => {
@@ -45,40 +86,94 @@ function Question() {
             </h2>
             <h3>{data[question].description}</h3>
             {/* For Scale type Questions */}
-            {/* <div className="single-question-container">
-              {data[mainIndex].nodes[dataIndex] &&
-              data[mainIndex].nodes[dataIndex].block &&
-              data[mainIndex].nodes[dataIndex].block.type &&
-              data[mainIndex].nodes[dataIndex].block.type ===
-                "tripetto-block-scale" ? (
-                <Radio.Group
-                  defaultValue="a"
-                  size="large"
-                  value={
-                    answer.filter(function (x) {
-                      return x.id === data[mainIndex].nodes[dataIndex].id;
-                    })[0].answer
-                  }
-                  buttonStyle="solid"
-                  onChange={(e) => {
-                    let newArray = [...answer];
-                    let d = newArray.filter(function (x) {
-                      return x.id === data[mainIndex].nodes[dataIndex].id;
-                    })[0];
-                    d.answer = e.target.value;
-                    setanswer([...newArray]);
-                  }}
-                >
-                  {[...Array(11)].map((e, i) => {
-                    return (
-                      <Radio.Button className="radio-tab" value={i}>
-                        {i}
-                      </Radio.Button>
-                    );
-                  })}
+            {data[question].type=="scale"?(
+              <div className="single-question-container">
+                 <Radio.Group onChange={onChange} size="large" buttonStyle="solid" value={radioOption}>
+                      {arr.map(i=><Radio.Button className="radio-tab" value={i}>{i}</Radio.Button>)}
                 </Radio.Group>
-              ) : null}
-            </div> */}
+            </div>
+
+            ):(
+              <div>
+                {data[question].type==="multiple-choice"?(
+                  <div className="multiple-choice-container">
+                  {data[question].options.map(option=>
+                     <Button
+                     type="primary"
+                                onClick={() => {
+      console.log("question past",data[question].id-1);
+                                  setButtonoption(option.option);
+                                  setQuestion(option.childID-1);
+                                  console.log("question",option.childID);
+                                  if(option.optionID)
+                                  {
+                                    setOptionID(option.optionID);
+                                    console.log("optionID",option.optionID);
+                                  }
+                                }}
+                                className=
+                                // {
+                                //     buttonOption=='Ja'?
+                                   "radio-multiple-choice"
+                                    // : "radio-multiple-choice"
+                                // }
+                              >
+                                {option.option}
+                              </Button>)}
+                 
+               
+          </div>
+                ):(<div>{data[question].type==="checkbox"?(
+                  <div>
+                     <div className="single-question-container">
+                     <Row>
+                     <Checkbox.Group style={{ width: '100%',fontSize:"25px" }} onChange={onChangeChecked}>
+                       {data[question]["checkbox-options"].map(option=>
+                        <Col span={16}>
+                          
+                        <Checkbox
+                        value={option.option}
+                      
+                          // onChange={(e) => {
+                          //   let newArray = [...answer];
+                          //   let d = newArray.filter(function (x) {
+                          //     return (
+                          //       x.id === data[mainIndex].nodes[dataIndex].id
+                          //     );
+                          //   })[0];
+
+                          //   if (d.answer) {
+                          //     const ans = d.answer;
+                          //     d.answer = {
+                          //       ...ans,
+                          //       [u.name]: e.target.checked,
+                          //     };
+                          //   } else {
+                          //     d.answer = { [u.name]: e.target.checked };
+                          //   }
+
+                          //   setanswer([...newArray]);
+                          // }}
+                          // value={u.name}
+                          // checked={ans && ans.answer && ans.answer[u.name]}
+                        >
+                          {option.option}
+                        </Checkbox>
+                      </Col>
+)}
+</Checkbox.Group>
+</Row>
+</div>
+                    </div>
+                ):(<div></div>)}
+
+
+
+
+                </div>)}
+              </div>
+            )}
+           
 
             {/* For Matrix Based Questions */}
 
@@ -232,7 +327,7 @@ function Question() {
 <Row justify="end">
       <Col span={4}></Col>
       <Col span={4}></Col>
-      <Col span={4}>{data[question].parentID.length===1 && data[question].parentID[0]==0?(
+      <Col span={4}>{data[question].parentID==0?(
          <Button
          type="primary"
          icon={<ArrowUpOutlined/>}
@@ -252,14 +347,26 @@ function Question() {
          
               </Col>
               <Col span={4} offset={8}>
-              <Button
-                type="primary"
-                icon={<ArrowDownOutlined />}
-                onClick={moveForward}
-                style={{marginLeft:"55px"}}
-              >
-                Next
-              </Button></Col>
+                {data[question].nextButton==true?(
+                   <Button
+                   type="primary"
+                   icon={<ArrowDownOutlined />}
+                   onClick={moveForward}
+                   style={{marginLeft:"55px"}}
+                 >
+                   Next
+                 </Button>
+                ):(
+                  <Button
+                  type="primary"
+                  icon={<ArrowDownOutlined />}
+                  onClick={moveForward}
+                  style={{marginLeft:"55px",display:"none"}}
+                >
+                  Next
+                </Button>
+                )}
+             </Col>
     </Row>
           </div>
         </Col>
