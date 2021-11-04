@@ -11,6 +11,7 @@ function Question() {
 
 const [checkedValues,setcheckedValues]=useState([]);
 const[optionID,setOptionID]=useState('');
+const[previousOptionID,setPreviousoptionID]=useState('');
 const onChangeChecked=(checkedValues)=> {
   console.log('checked = ', checkedValues);
   setcheckedValues(checkedValues);
@@ -21,7 +22,15 @@ const onChangeChecked=(checkedValues)=> {
   console.log(data);
   const [question,setQuestion]=useState(0);
   const[option,setOption]=useState('');
-  const arr=[0,1,2,3,4,5,6,7,8,9,10];
+  const arr=[];
+  if(data[question].type==="scale")
+  {
+    for(var i=data[question].scale.low;i<=data[question].scale.high;i++)
+    {
+      arr.push(i);
+    }
+  }
+  
   console.log('pages:')
   const moveForward=()=>
   { if(data[question].childID)
@@ -46,6 +55,7 @@ const onChangeChecked=(checkedValues)=> {
     else{
       if(optionID!='')
       {
+        console.log('past option id',previousOptionID);
         console.log("optionid",optionID);
         const optionLocation=data.find(item => {
           return item["optionID"] === optionID
@@ -101,6 +111,8 @@ const onChangeChecked=(checkedValues)=> {
                      <Button
                      type="primary"
                                 onClick={() => {
+                                  console.log("previous option id",optionID);
+                                  setPreviousoptionID(optionID);
       console.log("question past",data[question].id-1);
                                   setButtonoption(option.option);
                                   setQuestion(option.childID-1);
@@ -165,7 +177,49 @@ const onChangeChecked=(checkedValues)=> {
 </Row>
 </div>
                     </div>
+                ):(<div>{data[question].type==="matrix"?(
+                  <div>
+                   <div className="matrix-index-title">
+                     {data[question].labels.map(label=><span className="matrix-index">{label.labelId}</span>)}
+                     </div>
+                    
+                    
+                       {data[question]["matrix-options"].map(matrix=> <div className="matrix-radio-container"><p className="matrix-radio-option-title">{matrix.option}</p>
+                      <Radio.Group
+                        // onChange={(e) => {
+                        //   let newArray = [...answer];
+                        //   let d = newArray.filter(function (x) {
+                        //     return x.id === data[mainIndex].nodes[dataIndex].id;
+                        //   })[0];
+                        //   if (d.answer) {
+                        //     const ans = d.answer;
+                        //     d.answer = { ...ans, [u.id]: e.target.value };
+                        //   } else {
+                        //     d.answer = { [u.id]: e.target.value };
+                        //   }
+                        //   setanswer([...newArray]);
+                        // }}
+                        // value={ans && ans.answer && ans.answer[u.id]}
+                      >
+                        {/* {data[mainIndex].nodes[dataIndex].block.columns.map(
+                          (u, i) => {
+                            return ( */}
+                            {data[question].labels.map(label=><Radio
+                                className="matrix-radio"
+                                value={label.labelId}
+                              ></Radio>)}
+                              
+                            {/* );
+                          }
+                        )} */}
+                      </Radio.Group></div>)}
+                      
+
+</div>
                 ):(<div></div>)}
+                
+</div>
+                )}
 
 
 
