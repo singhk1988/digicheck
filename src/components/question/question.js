@@ -10,12 +10,13 @@ function Question() {
   var pages=[0];
 
 const [checkedValues,setcheckedValues]=useState([]);
-const[optionID,setOptionID]=useState('');
-const[previousOptionID,setPreviousoptionID]=useState('');
+// const[optionID,setOptionID]=useState('');
+// const[previousOptionID,setPreviousoptionID]=useState('');
 const onChangeChecked=(checkedValues)=> {
   console.log('checked = ', checkedValues);
   setcheckedValues(checkedValues);
 }
+const [myArr,setmyArr]=useState([0]);
   let data = questions.questions.steps;
   const [radioOption,setRadiooption]=useState(''); 
   const [buttonOption,setButtonoption]=useState('');
@@ -36,7 +37,10 @@ const onChangeChecked=(checkedValues)=> {
   { if(data[question].childID)
     {
       // console.log("question past",data[question].id-1);
+      console.log('arr already',myArr);
         setQuestion(data[question].childID-1);
+        setmyArr([...myArr, data[question].childID-1]);
+        console.log('arr',myArr);
         // console.log("question",data[question].childID);
         pages.push(data[question].childID-1);
     }
@@ -44,27 +48,33 @@ const onChangeChecked=(checkedValues)=> {
   }
   const moveBack=()=>
   {
-    if(data[question].parentID)
-    {
-      console.log("question past",data[question].id-1);
-      setQuestion(data[question].parentID-1);
-      // console.log("question_back",data[question].parentID);
-      setRadiooption('');
+    // debugger
+    var arraySample = [...myArr];
+    var poppedOut=arraySample.pop();
+    console.log("popped out",poppedOut);
+    setQuestion(arraySample[arraySample.length-1]);
+    setmyArr(arraySample);
+    // if(data[question].parentID)
+    // {
+    //   console.log("question past",data[question].id-1);
+    //   setQuestion(data[question].parentID-1);
+    //   // console.log("question_back",data[question].parentID);
+    //   setRadiooption('');
 
-    }
-    else{
-      if(optionID!='')
-      {
-        console.log('past option id',previousOptionID);
-        console.log("optionid",optionID);
-        const optionLocation=data.find(item => {
-          return item["optionID"] === optionID
-        })
-          console.log("questionID",optionLocation["id"]-1);
-          setQuestion(optionLocation["id"]-1);
-      }
+    // }
+    // else{
+    //   if(optionID!='')
+    //   {
+    //     console.log('past option id',previousOptionID);
+    //     console.log("optionid",optionID);
+    //     const optionLocation=data.find(item => {
+    //       return item["optionID"] === optionID
+    //     })
+    //       console.log("questionID",optionLocation["id"]-1);
+    //       setQuestion(optionLocation["id"]-1);
+    //   }
      
-    }
+    // }
     
     
     
@@ -77,6 +87,8 @@ const onChangeChecked=(checkedValues)=> {
     console.log(`radio checked:${e.target.value}`);
     setRadiooption(e.target.value);
     setQuestion(data[question].childID-1);
+    setmyArr([...myArr, data[question].childID-1]);
+    console.log('arr',myArr);
     console.log("question",data[question].childID);
   }
 //   useEffect(() => {
@@ -111,17 +123,15 @@ const onChangeChecked=(checkedValues)=> {
                      <Button
                      type="primary"
                                 onClick={() => {
-                                  console.log("previous option id",optionID);
-                                  setPreviousoptionID(optionID);
+                                  // console.log("previous option id",optionID);
+                                  // setPreviousoptionID(optionID);
       console.log("question past",data[question].id-1);
                                   setButtonoption(option.option);
                                   setQuestion(option.childID-1);
+                                  setmyArr([...myArr, option.childID-1]);
+                                  console.log('arr',myArr);
                                   console.log("question",option.childID);
-                                  if(option.optionID)
-                                  {
-                                    setOptionID(option.optionID);
-                                    console.log("optionID",option.optionID);
-                                  }
+                                  
                                 }}
                                 className=
                                 // {
@@ -381,7 +391,7 @@ const onChangeChecked=(checkedValues)=> {
 <Row justify="end">
       <Col span={4}></Col>
       <Col span={4}></Col>
-      <Col span={4}>{data[question].parentID==0?(
+      <Col span={4}>{myArr.length===1 && myArr[0]===0?(
          <Button
          type="primary"
          icon={<ArrowUpOutlined/>}

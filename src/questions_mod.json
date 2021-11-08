@@ -8,7 +8,6 @@
                 "type":"text",
                 "nextButton":true,
                 "backButton":false,
-                "parentID":0,
                 "childID":2
             },
             {
@@ -18,7 +17,6 @@
                 "type":"text",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":1,
                 "childID":3
             },
             {
@@ -28,7 +26,6 @@
                 "type":"scale",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":2,
                 "childID":4,
                 "scale":{
                     "low":0,
@@ -42,7 +39,6 @@
                 "type":"scale",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":3,
                 "childID":5,
                 "scale":{
                     "low":0,
@@ -56,7 +52,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":4,
                 "options":
                 [
                     {
@@ -76,16 +71,13 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":5,
                 "options":
                 [
                     {
-                        "optionID":1,
                         "option":"Ja",
                         "childID":7
                     },
                     {
-                        "optionID":2,
                         "option":"Nein",
                         "childID":25
                     }
@@ -99,7 +91,6 @@
                 "type":"scale",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":6,
                 "childID":8,
                 "scale":{
                     "low":0,
@@ -113,7 +104,6 @@
                 "type":"scale",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":7,
                 "childID":9,
                 "scale":{
                     "low":0,
@@ -121,14 +111,12 @@
                 } 
             },
             {
-                "optionID":1,
                 "id":9,
                 "question":"Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
                 "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":8,
                 "options":
                 [
                     {
@@ -168,7 +156,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":10,
                 "options":
                 [
                     {
@@ -188,7 +175,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":11,
                 "options":
                 [
                     {
@@ -208,7 +194,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":12,
                 "options":
                 [
                     {
@@ -228,7 +213,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":13,
                 "options":
                 [
                     {
@@ -248,7 +232,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":14,
                 "options":
                 [
                     {
@@ -268,7 +251,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":15,
                 "options":
                 [
                     {
@@ -288,7 +270,6 @@
                 "type":"text",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":16,
                 "childID":18
             },
             {
@@ -298,7 +279,6 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":17,
                 "options":
                 [
                     {
@@ -318,30 +298,25 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":18,
                 "options":
                 [
                     {
-                        "optionID":3,
                         "option":"Belegerfassung Standard",
                         "childID":20
                     },
                     {
-                        "optionID":4,
                         "option":"Belegerfassung Erweitert",
                         "childID":21
                     }
                 ]
             },
             {
-                "optionID":3,
                 "id":20,
                 "question":"Was sind die Hauptgründe, warum Ihre Mandanten hauptsächlich die Belegerfassung Standard nutzen?",
                 "description":"(Mehrfachantworten möglich)",
                 "type":"checkbox",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":19,
                 "childID":24,
                 "checkbox-options":
                 [
@@ -360,37 +335,31 @@
                 ]
             },
             {
-                "optionID":4,
                 "id":21,
                 "question":"Wird von Ihren Mandanten das Kassenbuch online zur Vorerfassung von Kassenbewegungen genutzt?",
                 "description":"bifurcation",
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":19,
                 "options":
                 [
                     {
-                        "optionID":5,
                         "option":"Ja",
                         "childID":22
                     },
                     {
-                        "optionID":6,
                         "option":"Nein",
                         "childID":23
                     }
                 ]
             },
             {
-                "optionID":5,
                 "id":22,
                 "question":"Wie groß ist in etwa der Anteil der Mandanten, die das Kassenbuch online nutzen?",
                 "description":null,
                 "type":"scale",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":21,
                 "childID":26,
                 "scale":{
                     "low":0,
@@ -398,14 +367,12 @@
                 } 
             },
             {
-                "optionID":6,
                 "id":23,
                 "question":"Was sind die Hauptgründe, warum Ihre Mandanten das Kassenbuch online nicht nutzen?",
                 "description":null,
                 "type":"checkbox",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":21,
                 "childID":26,
                 "checkbox-options":
                 [
@@ -443,14 +410,12 @@
                 ]
             },
             {
-                "optionID":2,
                 "id":25,
                 "question":"Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
                 "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":6,
                 "options":
                 [
                     {
@@ -470,7 +435,7 @@
                 "type":"checkbox",
                 "nextButton":true,
                 "backButton":true,
-                "childID":27,
+                "childID":43,
                 "checkbox-options":
                 [
                     {
@@ -494,7 +459,6 @@
                 "type":"matrix",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":24,
                 "childID":28,
                 "labels":
                 [
@@ -540,16 +504,13 @@
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":27,
                 "options":
                 [
                     {
-                        "optionID":7,
                         "option":"Ja",
                         "childID":29
                     },
                     {
-                        "optionID":8,
                         "option":"Nein",
                         "childID":30
                     }
@@ -562,7 +523,6 @@
                 "type":"checkbox",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":28,
                 "childID":31,
                 "checkbox-options":
                 [
@@ -581,23 +541,19 @@
                 ]
             },
             {
-                "optionID":8,
                 "id":30,
                 "question":"Schnittellen Section",
                 "description":null,
                 "type":"text",
-                "parentID":28,
                 "childID":32,
                 "nextButton":true,
                 "backButton":true
             },
             {
-                "optionID":7,
                 "id":31,
                 "question":"Schnittellen Section",
                 "description":null,
                 "type":"text",
-                "parentID":29,
                 "childID":32,
                 "nextButton":true,
                 "backButton":true
@@ -612,12 +568,10 @@
                 "options":
                 [
                     {
-                        "optionID":9,
                         "option":"Ja",
                         "childID":33
                     },
                     {
-                        "optionID":10,
                         "option":"Nein",
                         "childID":37
                     }
@@ -631,7 +585,6 @@
                 "type":"scale",
                 "nextButton":false,
                 "backButton":true,
-                "parentID":32,
                 "childID":34,
                 "scale":{
                     "low":0,
@@ -643,7 +596,6 @@
                 "question":"Werden die Daten aus dem Vorsystem mit Belegbildern übergeben?",
                 "description":null,
                 "type":"multiple-choice",
-                "parentID":33,
                 "nextButton":false,
                 "backButton":true,
                 "options":
@@ -663,7 +615,6 @@
                 "question":"Sind die Buchungsdaten aus dem Vorsystem bereits mit Zahlungen zugeordnet?",
                 "description":"z.B. Zuordnung über Bank, PayPal etc.",
                 "type":"multiple-choice",
-                "parentID":34,
                 "nextButton":false,
                 "backButton":true,
                 "options":
@@ -679,14 +630,12 @@
                 ]
             },
             {
-                "optionID":9,
                 "id":36,
                 "question":"Wie vertraut fühlen Sie sich mit den folgenden Schnittstellen?",
                 "description":"(1=weniger vertraut, 5= sehr vertraut)",
                 "type":"matrix",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":35,
                 "childID":38,
                 "labels":
                 [
@@ -723,14 +672,12 @@
                 ]
             },
             {
-                "optionID":10,
                 "id":37,
                 "question":"Wie vertraut fühlen Sie sich mit den folgenden Schnittstellen?",
                 "description":"(1=weniger vertraut, 5= sehr vertraut)",
                 "type":"matrix",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":32,
                 "childID":38,
                 "labels":
                 [
@@ -776,14 +723,12 @@
                 "options":
                 [
                     {
-                        "optionID":11,
                         "option":"Ja",
                         "childID":39
                     },
                     {
-                        "optionID":12,
                         "option":"Nein",
-                        "childID":41
+                        "childID":40
                     }
                 ]
             },
@@ -794,7 +739,6 @@
                 "type":"checkbox",
                 "nextButton":true,
                 "backButton":true,
-                "parentID":38,
                 "childID":40,
                 "checkbox-options":
                 [
@@ -814,37 +758,264 @@
                 "question":"Werden Kreditkartenabrechnungen digital eingespielt?",
                 "description":"Macht es hier Sinn in DUO und Kanzlei Rewe zu fragen, oder?",
                 "type":"multiple-choice",
-                "parentID":39,
                 "nextButton":false,
                 "backButton":true,
                 "options":
                 [
                     {
                         "option":"Ja",
-                        "childID":42
+                        "childID":41
                     },
                     {
-                        "option":"Nein"
+                        "option":"Nein",
+                        "childID":42
                     }
                 ]
             },
             {
                 "id":41,
-                "question":"Werden Kreditkartenabrechnungen digital eingespielt?",
-                "description":"Macht es hier Sinn in DUO und Kanzlei Rewe zu fragen, oder?",
+                "question":"Auf welche Art werden Kreditkartenabrechnungen in DATEV Unternehmen Online / Kanzlei Rechnungswesen eingespielt?",
+                "description":null,
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":42,
+                "checkbox-options":
+                [
+                    {
+                        "option":"PLEO"
+                    },
+                    {
+                        "option":"Konvertierung durch Drittanbieter (z.B. GetMyInvoices)"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":42,
+                "question":"Section Life Hacks",
+                "description":null,
+                "type":"text",
+                "nextButton":true,
+                "backButton":true,
+                "childID":44
+            },
+            {
+                "id":43,
+                "question":"Haben Sie Ihre Mandanten auf die Möglichkeit zur Kostenstellenrechnung in der erweiterten Belegerfassung aufmerksam gemacht?",
+                "description":null,
                 "type":"multiple-choice",
-                "parentID":38,
-                
                 "nextButton":false,
                 "backButton":true,
                 "options":
                 [
                     {
                         "option":"Ja",
-                        "childID":43
+                        "childID":24
                     },
                     {
-                        "option":"Nein"
+                        "option":"Nein",
+                        "childID":24
+                    }
+                ]
+            },
+            {
+                "id":44,
+                "question":"Nutzen Sie Lerndateien, um Buchungssätze zu automatisieren?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":45
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":47
+                    }
+                ]
+            },
+            {
+                "id":45,
+                "question":"Gibt es einen einheitlichen Kanzleiprozess der festlegt ,welche Standardlerndateien angelegt werden müssen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":46
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":47
+                    }
+                ]
+            },
+            {
+                "id":46,
+                "question":"Welche Standardlerndateien werden in Ihrer Kanzlei angelegt?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":47,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Miete"
+                    },
+                    {
+                        "option":"Beiträge"
+                    },
+                    {
+                        "option":"Versicherungen"
+                    },
+                    {
+                        "option":"Gebühren"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":47,
+                "question":"Grenzen Sie Aufwands- und Ertragsbuchungen unterjährig ab und nutzen Sie wiederkehrende Buchungen, um die Abgrenzungsposten wieder aufzulösen?",
+                "description":"z.B. Aktive und Passive Rechnungsabgrenzungsposten",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":48
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":48
+                    }
+                ]
+            },
+            {
+                "id":48,
+                "question":"Nutzen Sie DATEV spezifische Tastenkombinationen in Kanzlei Rechnungswesen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":49
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":49
+                    }
+                ]
+            },
+            {
+                "id":49,
+                "question":"Nutzen Sie die DATEV Kontonotizfunktion, um Hinweise zu speziellen Konten zu vermerken?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":50
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":50
+                    }
+                ]
+            },
+            {
+                "id":50,
+                "question":"Nutzen Sie individuelle Steuerschlüssel, um automatisiert Umbuchungen vorzunehmen?",
+                "description":"z.B. Bewirtungsaufwendungen automatisierte in abziehbarer und nicht abziehbarer Teil aufteilen",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":51
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":51
+                    }
+                ]
+            },
+            {
+                "id":51,
+                "question":"Verwenden Sie die Funktion Aufteilung von Belegen in DATEV um „Splittbuchungen“ vorzunehmen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":52
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":52
+                    }
+                ]
+            },
+            {
+                "id":52,
+                "question":"Werden Anzahlungen über die Funktion \"Anzahlung Buchen\" in DATEV genutzt?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":53
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":53
+                    }
+                ]
+            },
+            {
+                "id":53,
+                "question":"Verknüpfen Sie wichtige Dokumente aus dem DMS mit entsprechenden Konten in Kanzlei Rechnungswesen?",
+                "description":"z.B. Dauerrechnungen",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":54
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":54
                     }
                 ]
             }
