@@ -67,7 +67,7 @@
             {
                 "id":6,
                 "question":"Haben Sie einen standardisierten / Automatisierten Prozess für das Onboarding von Mandanten in DATEV Unternehmen Online?",
-                "description":"bifurcation",
+                "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
@@ -131,7 +131,7 @@
             },
             {
                 "id":10,
-                "question":"Werden Lohnabrechnungen ebenfalls über DATEV Unternehmen Online zur Verfügung gestellt? 10",
+                "question":"Werden Lohnabrechnungen ebenfalls über DATEV Unternehmen Online zur Verfügung gestellt?",
                 "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
@@ -294,7 +294,7 @@
             {
                 "id":19,
                 "question":"Welche Art der Belegerfassung nutzen Ihre Mandanten hauptsächlich in DATEV Unternehmen Online?",
-                "description":"bifurcation",
+                "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
@@ -337,7 +337,7 @@
             {
                 "id":21,
                 "question":"Wird von Ihren Mandanten das Kassenbuch online zur Vorerfassung von Kassenbewegungen genutzt?",
-                "description":"bifurcation",
+                "description":null,
                 "type":"multiple-choice",
                 "nextButton":false,
                 "backButton":true,
