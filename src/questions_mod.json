@@ -374,6 +374,7 @@
                 "nextButton":true,
                 "backButton":true,
                 "childID":26,
+                "required":true,
                 "checkbox-options":
                 [
                     {
@@ -1018,6 +1019,95 @@
                         "childID":54
                     }
                 ]
+            },
+            {
+                "id":54,
+                "question":"Welche Möglichkeiten zum Ausziffern von Konten nutzen Sie?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "optionChecked":"Automatischer Abgleich",
+                "optionChild":55,
+                "mustChild":56,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Automatischer Abgleich"
+                    },
+                    {
+                        "option":"Manuelle Zuordnung"
+                    }
+                ]
+            },
+            {
+                "id":55,
+                "question":"Welches ist die am häufigsten verwendete automatische Ausgleichsart?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Belegfeld 1",
+                        "childID":56
+                    },
+                    {
+                        "option":"Auftragsnummer",
+                        "childID":56
+                    },
+                    {
+                        "option":"Name Geschäftspartner",
+                        "childID":56
+                    }
+                ]
+            },
+            {
+                "id":56,
+                "question":"Verknüpfen Sie Verträge aus dem DMS in der DATEV Anlagenbuchhaltung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":57
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":57
+                    }
+                ]
+            },
+            {
+                "id":57,
+                "question":"Nutzen Sie die automatisierte Anlage von Inventaren im Rahmen der Buchung des Anlagevermögens in der Finanzbuchhaltung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":58
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":58
+                    }
+                ]
+            },
+            {
+                "id":58,
+                "question":null,
+                "description":null,
+                "type":"submit",
+                "nextButton":false,
+                "backButton":true
             }
             
 

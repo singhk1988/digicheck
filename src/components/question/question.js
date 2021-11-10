@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Row, Col, Layout, Checkbox } from "antd";
-import { ArrowDownOutlined, UpOutlined, DownOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { ArrowDownOutlined, UpOutlined, DownOutlined, ArrowUpOutlined,CheckOutlined } from "@ant-design/icons";
 import "../start/styles.css";
 import questions from "../../questions_mod.json";
 import { Radio } from "antd";
@@ -8,7 +8,11 @@ import { Radio } from "antd";
 function Question() {
   const { Footer } = Layout;
   var pages=[0];
-
+const include=(arr, obj)=> {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == obj) return true;
+  }
+}
 const [checkedValues,setcheckedValues]=useState([]);
 // const[optionID,setOptionID]=useState('');
 // const[previousOptionID,setPreviousoptionID]=useState('');
@@ -34,7 +38,12 @@ const [myArr,setmyArr]=useState([0]);
   
   console.log('pages:')
   const moveForward=()=>
-  { if(data[question].childID)
+  { 
+    // setOption('');
+    // setButtonoption('');
+    // setRadiooption('');
+    // setcheckedValues([]);
+    if(data[question].childID)
     {
       // console.log("question past",data[question].id-1);
       console.log('arr already',myArr);
@@ -43,6 +52,28 @@ const [myArr,setmyArr]=useState([0]);
         console.log('arr',myArr);
         // console.log("question",data[question].childID);
         pages.push(data[question].childID-1);
+    }
+    else if(data[question].type==="checkbox" && data[question].optionChecked!="")
+    {
+      if(checkedValues.length===0)
+      {
+        setQuestion(data[question].mustChild-1);
+        setmyArr([...myArr, data[question].mustChild-1]);
+        
+      }
+      else
+      {
+        if(include(checkedValues,data[question].optionChecked)===true)
+        {
+          setQuestion(data[question].optionChild-1);
+          setmyArr([...myArr, data[question].optionChild-1]);
+        }
+        else{
+          setQuestion(data[question].mustChild-1);
+        setmyArr([...myArr, data[question].mustChild-1]);
+        }
+        
+      }
     }
     console.log("question_parent",question);
   }
@@ -91,12 +122,13 @@ const [myArr,setmyArr]=useState([0]);
     console.log('arr',myArr);
     console.log("question",data[question].childID);
   }
-//   useEffect(() => {
-//     let da = data[mainIndex].nodes.map((d) => {
-//       return { name: d.name, id: d.id };
-//     });
-//     setanswer([...answer, ...da]);
-//   }, [data, mainIndex]);
+  useEffect(() => {
+    setOption('');
+    setButtonoption('');
+    setRadiooption('');
+    setcheckedValues([]);
+    console.log("refreshed");
+  }, [question, myArr, buttonOption, option, radioOption]);
 
   return (
     <div>
@@ -105,6 +137,7 @@ const [myArr,setmyArr]=useState([0]);
           <div className="question-container">
             <h2 className="question">
               {data[question].question}
+              <span>{data[question].required===true?(<span style={{color:"red"}}>*</span>):null}</span>
             </h2>
             <h3>{data[question].description}</h3>
             {/* For Scale type Questions */}
@@ -181,6 +214,8 @@ const [myArr,setmyArr]=useState([0]);
                         >
                           {option.option}
                         </Checkbox>
+                        
+
                       </Col>
 )}
 </Checkbox.Group>
@@ -226,7 +261,21 @@ const [myArr,setmyArr]=useState([0]);
                       
 
 </div>
-                ):(<div></div>)}
+                ):(<div>{data[question].type==="submit"?(
+                  <div>
+                    <Button
+                   type="primary"
+                   style={{backgroundColor:"#008000",marginBottom:"14px"}}
+                   icon={<CheckOutlined />}
+                  //  onClick={moveForward}
+                  //  style={{marginLeft:"55px"}}
+                 >
+                   Submit
+                 </Button>
+                    </div>
+                ):(
+                  <div></div>
+                )}</div>)}
                 
 </div>
                 )}
@@ -404,35 +453,111 @@ const [myArr,setmyArr]=useState([0]);
         type="primary"
         icon={<ArrowUpOutlined/>}
         onClick={moveBack}
-        style={{marginLeft:"140px"}}
+        // style={{marginLeft:"140px"}}
       >
         Back
       </Button>)}
          
               </Col>
-              <Col span={4} offset={8}>
-                {data[question].nextButton==true?(
-                   <Button
+              <Col span={4}>
+                {data[question].type==="checkbox" || data[question].type==="matrix"?(
+                <div>
+                {data[question].nextButton==true?(<>{data[question].required===true?(<>
+                {checkedValues.length===0?(
+                  <Button
+                  type="primary"
+                  icon={<ArrowDownOutlined />}
+                  onClick={moveForward}
+                  // style={{marginLeft:"55px"}}
+                  disabled
+                >
+                  Next
+                </Button>
+                ):(
+                  <Button
                    type="primary"
                    icon={<ArrowDownOutlined />}
                    onClick={moveForward}
-                   style={{marginLeft:"55px"}}
+                  //  style={{marginLeft:"55px"}}
                  >
                    Next
                  </Button>
+                )}</>
+                  
+                ):(
+                  <Button
+                   type="primary"
+                   icon={<ArrowDownOutlined />}
+                   onClick={moveForward}
+                  //  style={{marginLeft:"102px"}}
+                 >
+                   Next
+                 </Button>
+                )}</>
+                   
                 ):(
                   <Button
                   type="primary"
                   icon={<ArrowDownOutlined />}
                   onClick={moveForward}
-                  style={{marginLeft:"55px",display:"none"}}
+                  style={{display:"none"}}
                 >
                   Next
                 </Button>
                 )}
+                </div>
+              ):(
+                <div>
+                {data[question].nextButton==true?(<>{data[question].required===true?(<>
+                {checkedValues.length===0?(
+                  <Button
+                  type="primary"
+                  icon={<ArrowDownOutlined />}
+                  onClick={moveForward}
+                  style={{marginLeft:"102px"}}
+                  disabled
+                >
+                  Next
+                </Button>
+                ):(
+                  <Button
+                   type="primary"
+                   icon={<ArrowDownOutlined />}
+                   onClick={moveForward}
+                   style={{marginLeft:"102px"}}
+                 >
+                   Next
+                 </Button>
+                )}</>
+                  
+                ):(
+                  <Button
+                   type="primary"
+                   icon={<ArrowDownOutlined />}
+                   onClick={moveForward}
+                   style={{marginLeft:"102px"}}
+                 >
+                   Next
+                 </Button>
+                )}</>
+                   
+                ):(
+                  <Button
+                  type="primary"
+                  icon={<ArrowDownOutlined />}
+                  onClick={moveForward}
+                  style={{marginLeft:"102px",display:"none"}}
+                >
+                  Next
+                </Button>
+                )}
+                </div>
+              )}
              </Col>
     </Row>
+    
           </div>
+         
         </Col>
       </Row>
 

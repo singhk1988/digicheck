@@ -1,0 +1,33 @@
+.radio_container {
+  position: relative;
+  top: 10rem;
+  /* background-color: cadetblue; */
+}
+.radio_title {
+  width: 60%;
+  margin: auto;
+  font-size: 29px;
+  font-weight: 700;
+  text-align: justify;
+  word-spacing: -4px;
+}
+
+.radio_table {
+  margin: auto;
+  width: 60%;
+  height: 300px;
+  font-weight: bolder;
+  /* padding: 50px; */
+  /* border: 1px solid red; */
+}
+.ant-table-tbody > tr > td {
+  font-size: 19px;
+}
+.ant-table-container table > thead > tr:first-child th:last-child {
+  letter-spacing: 15px;
+}
+.ant-radio-inner {
+  /* width: 30px;
+  height: 30px;
+  border-color: black; */
+}
