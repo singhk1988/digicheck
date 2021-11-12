@@ -133,8 +133,35 @@ const [myArr,setmyArr]=useState([0]);
   return (
     <div>
        <Row>
-        <Col span={24} className="start_title">
+        <Col span={24} className=
+                                {
+                                    data[question].type=='matrix'?
+                                   "start_title_matrix"
+                                    : "start_title"
+                                }>
           <div className="question-container">
+            
+          {myArr.length===1 && myArr[0]===0?(
+         <Button
+         type="link"
+        //  type="primary"
+         className="back"
+         icon={<ArrowUpOutlined/>}
+         // onClick={moveForward}
+         style={{display:"none"}}
+       >
+         Back
+       </Button>
+           ):(<Button
+            type="link"
+        // type="primary"
+        className="back"
+        icon={<ArrowUpOutlined/>}
+        onClick={moveBack}
+      >
+        Back
+      </Button>)}
+      
             <h2 className="question">
               {data[question].question}
               <span>{data[question].required===true?(<span style={{color:"red"}}>*</span>):null}</span>
@@ -145,7 +172,17 @@ const [myArr,setmyArr]=useState([0]);
               <div className="single-question-container">
                  <Radio.Group onChange={onChange} size="large" buttonStyle="solid" value={radioOption}>
                       {arr.map(i=><Radio.Button className="radio-tab" value={i}>{i}</Radio.Button>)}
+                      
                 </Radio.Group>
+                {/* <Row justify="start">
+                <Col span={4}>col-4</Col>
+      <Col span={4} offset={1}>col-4</Col>
+      <Col span={3} offset={2}>col-4</Col>
+      
+    </Row> */}
+    <div className="eqi-container">
+      {data[question].scaleMark.map(scaleMark=>(<div className="class-mark">{scaleMark}</div>))}
+</div>
             </div>
 
             ):(
@@ -184,7 +221,7 @@ const [myArr,setmyArr]=useState([0]);
                      <Row>
                      <Checkbox.Group style={{ width: '100%',fontSize:"25px" }} onChange={onChangeChecked}>
                        {data[question]["checkbox-options"].map(option=>
-                        <Col span={16}>
+                        <Col span={24}>
                           
                         <Checkbox
                         value={option.option}
@@ -229,7 +266,7 @@ const [myArr,setmyArr]=useState([0]);
                      </div>
                     
                     
-                       {data[question]["matrix-options"].map(matrix=> <div className="matrix-radio-container"><p className="matrix-radio-option-title">{matrix.option}</p>
+                       {data[question]["matrix-options"].map(matrix=> <div className="matrix-radio-container"><p className="matrix-radio-option-title">{matrix.option}</p> <p className="radio-space"></p>
                       <Radio.Group
                         // onChange={(e) => {
                         //   let newArray = [...answer];
@@ -437,7 +474,7 @@ const [myArr,setmyArr]=useState([0]);
               ) : null}
             </div> */}
 
-<Row justify="end">
+{/* <Row justify="end">
       <Col span={4}></Col>
       <Col span={4}></Col>
       <Col span={4}>{myArr.length===1 && myArr[0]===0?(
@@ -459,8 +496,7 @@ const [myArr,setmyArr]=useState([0]);
       </Button>)}
          
               </Col>
-              <Col span={4}>
-                {data[question].type==="checkbox" || data[question].type==="matrix"?(
+              <Col span={4}> */}
                 <div>
                 {data[question].nextButton==true?(<>{data[question].required===true?(<>
                 {checkedValues.length===0?(
@@ -468,7 +504,7 @@ const [myArr,setmyArr]=useState([0]);
                   type="primary"
                   icon={<ArrowDownOutlined />}
                   onClick={moveForward}
-                  // style={{marginLeft:"55px"}}
+                  // style={{marginLeft:"102px"}}
                   disabled
                 >
                   Next
@@ -478,7 +514,7 @@ const [myArr,setmyArr]=useState([0]);
                    type="primary"
                    icon={<ArrowDownOutlined />}
                    onClick={moveForward}
-                  //  style={{marginLeft:"55px"}}
+                  //  style={{marginLeft:"102px"}}
                  >
                    Next
                  </Button>
@@ -500,61 +536,15 @@ const [myArr,setmyArr]=useState([0]);
                   type="primary"
                   icon={<ArrowDownOutlined />}
                   onClick={moveForward}
-                  style={{display:"none"}}
-                >
-                  Next
-                </Button>
-                )}
-                </div>
-              ):(
-                <div>
-                {data[question].nextButton==true?(<>{data[question].required===true?(<>
-                {checkedValues.length===0?(
-                  <Button
-                  type="primary"
-                  icon={<ArrowDownOutlined />}
-                  onClick={moveForward}
-                  style={{marginLeft:"102px"}}
-                  disabled
-                >
-                  Next
-                </Button>
-                ):(
-                  <Button
-                   type="primary"
-                   icon={<ArrowDownOutlined />}
-                   onClick={moveForward}
-                   style={{marginLeft:"102px"}}
-                 >
-                   Next
-                 </Button>
-                )}</>
-                  
-                ):(
-                  <Button
-                   type="primary"
-                   icon={<ArrowDownOutlined />}
-                   onClick={moveForward}
-                   style={{marginLeft:"102px"}}
-                 >
-                   Next
-                 </Button>
-                )}</>
-                   
-                ):(
-                  <Button
-                  type="primary"
-                  icon={<ArrowDownOutlined />}
-                  onClick={moveForward}
                   style={{marginLeft:"102px",display:"none"}}
                 >
                   Next
                 </Button>
                 )}
                 </div>
-              )}
-             </Col>
-    </Row>
+              
+             {/* </Col>
+    </Row> */}
     
           </div>
          
