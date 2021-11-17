@@ -43,22 +43,43 @@
   background: #000 !important;
 }
 
-.ant-radio-group-solid
+.single-question-container .ant-radio-group-solid
   .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
   background: #000 !important;
   border-color: #000 !important;
 }
-
-.ant-radio-button-wrapper:first-child {
+.multiple-choice-container .ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)
+  {
+    color:black !important;
+    background: white !important;
+    border-color:black !important;
+  }
+  .multiple-choice-container .ant-radio-button-wrapper:hover {
+    /* position: relative; */
+    color: white !important;
+    background: #000 !important;
+  border-color: #000 !important;
+  }
+  .multiple-choice-container .ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:hover {
+    /* position: relative; */
+    color: white !important;
+    background: #000 !important;
+  border-color: #000 !important;
+  }
+.single-question-container .ant-radio-button-wrapper:first-child {
   border-left: 1px solid #000 !important;
   border-radius: 10px 0 0 10px !important;
 }
-
-.ant-radio-button-wrapper:last-child {
+.multiple-choice-container .ant-radio-button-wrapper{
+  border-radius: 10px !important;
+}
+.single-question-container .ant-radio-button-wrapper:last-child {
   border-radius: 0px 10px 10px 0px !important;
 }
 
-.ant-radio-button-wrapper:hover {
+.single-question-container .ant-radio-button-wrapper:hover {
   position: relative;
   color: #ababab !important;
 }
@@ -67,7 +88,7 @@
   border: 1px solid #000;
 }
 
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active:before {
+.single-question-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active:before {
   background-color: #000 !important;
 }
 
@@ -89,4 +110,24 @@
   align-items: baseline;
   line-height: unset;
   cursor: pointer;
+}
+.multiple-choice-container{
+  font-size: 0.9rem !important;
+  
+}
+.multiple-choice-container .multi-choice{
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 0.5em;
+  font-weight: 600;
+  padding:12px;
+}
+.multiple-choice-container .ant-radio-group-large .ant-radio-button-wrapper{
+  height: 50px !important;
+}
+
+.multiple-choice-container .ant-radio-button-wrapper:first-child {
+  border-left: 1px solid #000 !important;
 }

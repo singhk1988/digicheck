@@ -259,3 +259,6 @@
   flex-direction: column;
 }
 
+.multiple-choice-container .radio-multiple-choice{
+  padding:0em;
+}

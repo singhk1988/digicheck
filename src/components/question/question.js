@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Row, Col, Layout, Checkbox } from "antd";
+import { Button, Row, Col, Layout, Checkbox, Space } from "antd";
 import { ArrowDownOutlined, UpOutlined, DownOutlined, ArrowUpOutlined,CheckOutlined } from "@ant-design/icons";
 import "../start/styles.css";
 import questions from "../../questions_mod.json";
@@ -189,29 +189,25 @@ const [myArr,setmyArr]=useState([0]);
               <div>
                 {data[question].type==="multiple-choice"?(
                   <div className="multiple-choice-container">
-                  {data[question].options.map(option=>
-                     <Button
-                     type="primary"
-                                onClick={() => {
-                                  // console.log("previous option id",optionID);
-                                  // setPreviousoptionID(optionID);
-      console.log("question past",data[question].id-1);
+                  
+                     <Radio.Group
+                    //  value={option.option}
+                    //  onChange={onChange}
+                     buttonStyle="solid"
+                     size="large"
+                   >
+                     <Space direction="vertical">
+                       {data[question].options.map(option=><Radio.Button className='multi-choice' key={option.childID} value={option.option} onClick={()=>{ console.log("question past",data[question].id-1);
                                   setButtonoption(option.option);
                                   setQuestion(option.childID-1);
                                   setmyArr([...myArr, option.childID-1]);
                                   console.log('arr',myArr);
                                   console.log("question",option.childID);
-                                  
-                                }}
-                                className=
-                                // {
-                                //     buttonOption=='Ja'?
-                                   "radio-multiple-choice"
-                                    // : "radio-multiple-choice"
-                                // }
-                              >
-                                {option.option}
-                              </Button>)}
+                                  }}>
+                      {option.option}
+                    </Radio.Button>)}
+                     </Space>
+                   </Radio.Group>
                  
                
           </div>
