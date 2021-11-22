@@ -1,11 +1,14 @@
 import React from "react";
+import Question from './question';
 
-function Question() {
+function index() {
   return (
     <div>
-      <h1>Hello New Component</h1>
+      {/* <RadioButton /> */}
+      <Question/>
+      {/* <SelectButton /> */}
     </div>
   );
 }
 
-export default Question;
+export default index;

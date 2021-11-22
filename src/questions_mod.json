@@ -1,0 +1,1123 @@
+{
+"questions": {
+          "steps": [
+            { 
+                "id":1,
+                "question":"Start Video",
+                "description":null,
+                "type":"text",
+                "nextButton":true,
+                "backButton":false,
+                "childID":2
+            },
+            {
+                "id":2,
+                "question":"Funktionen Kanzlei",
+                "description":null,
+                "type":"text",
+                "nextButton":true,
+                "backButton":true,
+                "childID":3
+            },
+            {
+                "id":3,
+                "question":"Wie viel Prozent der Belege Ihrer Mandanten für die Finanzbuchhaltung erhalten Sie bereits digital?",
+                "description":null,
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "childID":4,
+                "scale":{
+                    "low":0,
+                    "high":10
+                },
+                "scaleMark":["0%","50%","100%"]
+            },
+            {
+                "id":4,
+                "question":"Wie groß ist der Anteil der Finanzbuchhaltungen, die in Ihrer Kanzlei vollständig digital erstellt werden?",
+                "description":"Vollständig digitale Erstellung, ohne Kontierung auf Papierbelegen",
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "childID":5,
+                "scale":{
+                    "low":0,
+                    "high":10
+                },
+                "scaleMark":["0%","50%","100%"] 
+            },
+            {
+                "id":5,
+                "question":"Nutzen Sie eine Prozessdokumentation für die Zusammenarbeit mit Ihren Mandanten?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":6
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":6
+                    }
+                ]
+            },
+            {
+                "id":6,
+                "question":"Haben Sie einen standardisierten / Automatisierten Prozess für das Onboarding von Mandanten in DATEV Unternehmen Online?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":7
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":25
+                    }
+                ]
+            },
+            {
+                
+                "id":7,
+                "question":"Wie hoch schätzen Sie die den Grad der Standardisierung in diesem Prozess?",
+                "description":null,
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "childID":8,
+                "scale":{
+                    "low":0,
+                    "high":10
+                },
+                "scaleMark":["0%","50%","100%"] 
+            },
+            {
+                "id":8,
+                "question":"Wie hoch schätzen Sie die den Grad der Automatisierung in diesem Prozess?",
+                "description":null,
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "childID":9,
+                "scale":{
+                    "low":0,
+                    "high":10
+                },
+                "scaleMark":["0%","50%","100%"] 
+            },
+            {
+                "id":9,
+                "question":"Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":10
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":10
+                    }
+                ]
+            },
+            {
+                "id":10,
+                "question":"Werden Lohnabrechnungen ebenfalls über DATEV Unternehmen Online zur Verfügung gestellt?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":11
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":11
+                    }
+                ]
+            },
+            {
+                "id":11,
+                "question":"Nutzen Sie alternative Cloud-Lösungen um Belege und Informationen von Mandanten einzusammeln?",
+                "description":"z.B. Dracoon, Kanzlei.land oder 5f Software",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":12
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":12
+                    }
+                ]
+            },
+            {
+                "id":12,
+                "question":"Nutzen Sie die Funktion DATEV Periodenabschluss?",
+                "description":"z.B. um Daten automatisiert zu übermitteln, bereitzustellen und zu exportieren?",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":13
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":13
+                    }
+                ]
+            },
+            {
+                "id":13,
+                "question":" Nutzen Sie Plan-BWA Werte, um ein Soll/Ist Vergleich für Ihre Mandanten durchzuführen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":14
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":14
+                    }
+                ]
+            },
+            {
+                "id":14,
+                "question":"Wird die DATEV FiBu Überwachung zur Plausibilitätsprüfung und Fehlererkennung genutzt?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":15
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":15
+                    }
+                ]
+            },
+            {
+                "id":15,
+                "question":"Ist die DATEV Funktion \"Lastschrift einziehen\" bekannt?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":16
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":16
+                    }
+                ]
+            },
+            {
+                "id":16,
+                "question":"Nutzen Sie DATEV Pro Check um Prozesse in Ihrer Kanzlei zu dokumentieren?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":17
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":17
+                    }
+                ]
+            },
+            {
+                "id":17,
+                "question":"Funktionen Mandant",
+                "description":null,
+                "type":"text",
+                "nextButton":true,
+                "backButton":true,
+                "childID":18
+            },
+            {
+                "id":18,
+                "question":"Nutzen Mandanten die digitale Personalakte in DATEV Unternehmen Online?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":19
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":19
+                    }
+                ]
+            },
+            {
+                "id":19,
+                "question":"Welche Art der Belegerfassung nutzen Ihre Mandanten hauptsächlich in DATEV Unternehmen Online?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Belegerfassung Standard",
+                        "childID":20
+                    },
+                    {
+                        "option":"Belegerfassung Erweitert",
+                        "childID":21
+                    }
+                ]
+            },
+            {
+                "id":20,
+                "question":"Was sind die Hauptgründe, warum Ihre Mandanten hauptsächlich die Belegerfassung Standard nutzen?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":24,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Sorge, dass Belege falsch / nicht korrekt erfasst und zugeordnet werden"
+                    },
+                    {
+                        "option":"Mandant ist die Funktion \"Belegerfassung Erweitert\" nicht bekannt"
+                    },
+                    {
+                        "option":"Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":21,
+                "question":"Wird von Ihren Mandanten das Kassenbuch online zur Vorerfassung von Kassenbewegungen genutzt?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":22
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":23
+                    }
+                ]
+            },
+            {
+                "id":22,
+                "question":"Wie groß ist in etwa der Anteil der Mandanten, die das Kassenbuch online nutzen?",
+                "description":null,
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "childID":26,
+                "scale":{
+                    "low":0,
+                    "high":10
+                },
+                "scaleMark":["0%","50%","100%"] 
+            },
+            {
+                "id":23,
+                "question":"Was sind die Hauptgründe, warum Ihre Mandanten das Kassenbuch online nicht nutzen?",
+                "description":null,
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":26,
+                "required":true,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Vorsystem des Mandanten erfasst Kassenbewegungen"
+                    },
+                    {
+                        "option":"Mandant ist die Funktion \"Kassenbuch online\" nicht bekannt"
+                    },
+                    {
+                        "option":"Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":24,
+                "question":"Nutzen Mandanten hauptsächlich ein zentrales Medium, um Rechnungen digital zu empfangen?",
+                "description":"z.B. eine einheitliche E-Mail Adresse",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":27
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":27
+                    }
+                ]
+            },
+            {
+                "id":25,
+                "question":"Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":10
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":10
+                    }
+                ]
+            },
+            {
+                "id":26,
+                "question":"Wie erfolgt die Abwicklung des Zahlungsverkehrs bei Ihren Mandanten?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":43,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Durch den Mandanten selbst über DATEV Unternehmen Online"
+                    },
+                    {
+                        "option":"Durch die Kanzlei über den DATEV Zahlungsverkehr"
+                    },
+                    {
+                        "option":"Durch Drittanwendungen des Mandanten außerhalb von DATEV"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":27,
+                "question":"Wie vertraut sind Ihre Mandanten in Bezug auf die verschiedenen Möglichkeiten, Belege in DATEV Unternehmen Online hochzuladen?",
+                "description":"(1=weniger vertraut, 5= sehr vertraut)",
+                "type":"matrix",
+                "nextButton":true,
+                "backButton":true,
+                "childID":28,
+                "labels":
+                [
+                    {
+                        "labelId":1
+                    },
+                    {
+                        "labelId":2
+                    },
+                    {
+                        "labelId":3
+                    },
+                    {
+                        "labelId":4
+                    },
+                    {
+                        "labelId":5
+                    }
+                ],
+                "matrix-options":
+                [
+                    {
+                        "option":"DATEV.de/upload"
+                    },
+                    {
+                        "option":"DATEV Upload Mail nach jeweiligem Belegtyp"
+                    },
+                    {
+                        "option":"DATEV Upload Mobil App"
+                    },
+                    {
+                        "option":"DATEV Belegtransfer online"
+                    },
+                    {
+                        "option":"DATEV Connect online"
+                    }
+                ]
+            },
+            {
+                "id":28,
+                "question":"Werden neben den Standardbelegtypen individuelle Belegtypen in DATEV Unternehmen Online genutzt?",
+                "description":"Standardbelegtypen sind i.d.R. Rechnungseingang, Rechnungsausgang, Kasse, Sonstiges)",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":29
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":30
+                    }
+                ]
+            },
+            {
+                "id":29,
+                "question":"Welche zusätzlichen Belegtypen werden hierfür genutzt?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":31,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Auslagen"
+                    },
+                    {
+                        "option":"Kreditkarten"
+                    },
+                    {
+                        "option":"Nachgereichte Belege"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":30,
+                "question":"Schnittellen Section",
+                "description":null,
+                "type":"text",
+                "childID":32,
+                "nextButton":true,
+                "backButton":true
+            },
+            {
+                "id":31,
+                "question":"Schnittellen Section",
+                "description":null,
+                "type":"text",
+                "childID":32,
+                "nextButton":true,
+                "backButton":true
+            },
+            {
+                "id":32,
+                "question":"Nutzen Ihre Mandanten vorgelagerte Buchhaltungssysteme?",
+                "description":"z.B. SevDesk, Buchhaltungsbutler, LexOffice",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":33
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":37
+                    }
+                ]
+            },
+            {
+                
+                "id":33,
+                "question":"Wie reibungslos funktioniert die Integration dieser vorgelagerten Buchhaltungssysteme in Kanzlei Rechnungswesen?",
+                "description":null,
+                "type":"scale",
+                "nextButton":false,
+                "backButton":true,
+                "childID":34,
+                "scale":{
+                    "low":0,
+                    "high":5
+                },
+                "scaleMark":["stockend","reibungslos"," "]
+
+            },
+            {
+                "id":34,
+                "question":"Werden die Daten aus dem Vorsystem mit Belegbildern übergeben?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":35
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":35
+                    }
+                ]
+            },
+            {
+                "id":35,
+                "question":"Sind die Buchungsdaten aus dem Vorsystem bereits mit Zahlungen zugeordnet?",
+                "description":"z.B. Zuordnung über Bank, PayPal etc.",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":36
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":36
+                    }
+                ]
+            },
+            {
+                "id":36,
+                "question":"Wie vertraut fühlen Sie sich mit den folgenden Schnittstellen?",
+                "description":"(1=weniger vertraut, 5= sehr vertraut)",
+                "type":"matrix",
+                "nextButton":true,
+                "backButton":true,
+                "childID":38,
+                "labels":
+                [
+                    {
+                        "labelId":1
+                    },
+                    {
+                        "labelId":2
+                    },
+                    {
+                        "labelId":3
+                    },
+                    {
+                        "labelId":4
+                    },
+                    {
+                        "labelId":5
+                    }
+                ],
+                "matrix-options":
+                [
+                    {
+                        "option":"Schnittstelle \"DATEV Format\""
+                    },
+                    {
+                        "option":"DATEV XML Schnittstelle"
+                    },
+                    {
+                        "option":"DATEV Connect Online Schnittstelle"
+                    },
+                    {
+                        "option":"DATEV ASCII Schnittstelle"
+                    }
+                ]
+            },
+            {
+                "id":37,
+                "question":"Wie vertraut fühlen Sie sich mit den folgenden Schnittstellen?",
+                "description":"(1=weniger vertraut, 5= sehr vertraut)",
+                "type":"matrix",
+                "nextButton":true,
+                "backButton":true,
+                "childID":38,
+                "labels":
+                [
+                    {
+                        "labelId":1
+                    },
+                    {
+                        "labelId":2
+                    },
+                    {
+                        "labelId":3
+                    },
+                    {
+                        "labelId":4
+                    },
+                    {
+                        "labelId":5
+                    }
+                ],
+                "matrix-options":
+                [
+                    {
+                        "option":"Schnittstelle \"DATEV Format\""
+                    },
+                    {
+                        "option":"DATEV XML Schnittstelle"
+                    },
+                    {
+                        "option":"DATEV Connect Online Schnittstelle"
+                    },
+                    {
+                        "option":"DATEV ASCII Schnittstelle"
+                    }
+                ]
+            },
+            {
+                "id":38,
+                "question":"Werden Kontoumsätze automatisiert in Kanzlei Rechnungswesen eingelesen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":39
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":40
+                    }
+                ]
+            },
+            {
+                "id":39,
+                "question":"Auf welchem Weg werden die Kontoauszüge in DATEV Unternehmen Online eingelesen?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":40,
+                "checkbox-options":
+                [
+                    {
+                        "option":"DATEV Rechenzentrum (z.B. Kontoauszugsmanager)"
+                    },
+                    {
+                        "option":"Drittlösung (über Anbieter wie z.B. Konvertax, Payjoe,…)"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":40,
+                "question":"Werden Kreditkartenabrechnungen digital eingespielt?",
+                "description":"Macht es hier Sinn in DUO und Kanzlei Rewe zu fragen, oder?",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":41
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":42
+                    }
+                ]
+            },
+            {
+                "id":41,
+                "question":"Auf welche Art werden Kreditkartenabrechnungen in DATEV Unternehmen Online / Kanzlei Rechnungswesen eingespielt?",
+                "description":null,
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":42,
+                "checkbox-options":
+                [
+                    {
+                        "option":"PLEO"
+                    },
+                    {
+                        "option":"Konvertierung durch Drittanbieter (z.B. GetMyInvoices)"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":42,
+                "question":"Section Life Hacks",
+                "description":null,
+                "type":"text",
+                "nextButton":true,
+                "backButton":true,
+                "childID":44
+            },
+            {
+                "id":43,
+                "question":"Haben Sie Ihre Mandanten auf die Möglichkeit zur Kostenstellenrechnung in der erweiterten Belegerfassung aufmerksam gemacht?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":24
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":24
+                    }
+                ]
+            },
+            {
+                "id":44,
+                "question":"Nutzen Sie Lerndateien, um Buchungssätze zu automatisieren?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":45
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":47
+                    }
+                ]
+            },
+            {
+                "id":45,
+                "question":"Gibt es einen einheitlichen Kanzleiprozess der festlegt ,welche Standardlerndateien angelegt werden müssen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":46
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":47
+                    }
+                ]
+            },
+            {
+                "id":46,
+                "question":"Welche Standardlerndateien werden in Ihrer Kanzlei angelegt?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "childID":47,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Miete"
+                    },
+                    {
+                        "option":"Beiträge"
+                    },
+                    {
+                        "option":"Versicherungen"
+                    },
+                    {
+                        "option":"Gebühren"
+                    },
+                    {
+                        "option":"Sonstiges"
+                    }
+                ]
+            },
+            {
+                "id":47,
+                "question":"Grenzen Sie Aufwands- und Ertragsbuchungen unterjährig ab und nutzen Sie wiederkehrende Buchungen, um die Abgrenzungsposten wieder aufzulösen?",
+                "description":"z.B. Aktive und Passive Rechnungsabgrenzungsposten",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":48
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":48
+                    }
+                ]
+            },
+            {
+                "id":48,
+                "question":"Nutzen Sie DATEV spezifische Tastenkombinationen in Kanzlei Rechnungswesen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":49
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":49
+                    }
+                ]
+            },
+            {
+                "id":49,
+                "question":"Nutzen Sie die DATEV Kontonotizfunktion, um Hinweise zu speziellen Konten zu vermerken?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":50
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":50
+                    }
+                ]
+            },
+            {
+                "id":50,
+                "question":"Nutzen Sie individuelle Steuerschlüssel, um automatisiert Umbuchungen vorzunehmen?",
+                "description":"z.B. Bewirtungsaufwendungen automatisierte in abziehbarer und nicht abziehbarer Teil aufteilen",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":51
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":51
+                    }
+                ]
+            },
+            {
+                "id":51,
+                "question":"Verwenden Sie die Funktion Aufteilung von Belegen in DATEV um „Splittbuchungen“ vorzunehmen?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":52
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":52
+                    }
+                ]
+            },
+            {
+                "id":52,
+                "question":"Werden Anzahlungen über die Funktion \"Anzahlung Buchen\" in DATEV genutzt?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":53
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":53
+                    }
+                ]
+            },
+            {
+                "id":53,
+                "question":"Verknüpfen Sie wichtige Dokumente aus dem DMS mit entsprechenden Konten in Kanzlei Rechnungswesen?",
+                "description":"z.B. Dauerrechnungen",
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":54
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":54
+                    }
+                ]
+            },
+            {
+                "id":54,
+                "question":"Welche Möglichkeiten zum Ausziffern von Konten nutzen Sie?",
+                "description":"(Mehrfachantworten möglich)",
+                "type":"checkbox",
+                "nextButton":true,
+                "backButton":true,
+                "optionChecked":"Automatischer Abgleich",
+                "optionChild":55,
+                "mustChild":56,
+                "checkbox-options":
+                [
+                    {
+                        "option":"Automatischer Abgleich"
+                    },
+                    {
+                        "option":"Manuelle Zuordnung"
+                    }
+                ]
+            },
+            {
+                "id":55,
+                "question":"Welches ist die am häufigsten verwendete automatische Ausgleichsart?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Belegfeld 1",
+                        "childID":56
+                    },
+                    {
+                        "option":"Auftragsnummer",
+                        "childID":56
+                    },
+                    {
+                        "option":"Name Geschäftspartner",
+                        "childID":56
+                    }
+                ]
+            },
+            {
+                "id":56,
+                "question":"Verknüpfen Sie Verträge aus dem DMS in der DATEV Anlagenbuchhaltung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":57
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":57
+                    }
+                ]
+            },
+            {
+                "id":57,
+                "question":"Nutzen Sie die automatisierte Anlage von Inventaren im Rahmen der Buchung des Anlagevermögens in der Finanzbuchhaltung?",
+                "description":null,
+                "type":"multiple-choice",
+                "nextButton":false,
+                "backButton":true,
+                "options":
+                [
+                    {
+                        "option":"Ja",
+                        "childID":58
+                    },
+                    {
+                        "option":"Nein",
+                        "childID":58
+                    }
+                ]
+            },
+            {
+                "id":58,
+                "question":null,
+                "description":null,
+                "type":"submit",
+                "nextButton":false,
+                "backButton":true
+            }
+            
+
+          ]
+}
+}

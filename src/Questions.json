@@ -1,0 +1,2515 @@
+{
+  "data": {
+    "definition": {
+      "data": {
+        "clusters": [
+          {
+            "id": "fb9abbd713415ffce4c5fba40f32ea7a9cb481ac57d4e724a572a0e9734784af",
+            "nodes": [
+              {
+                "id": "b599bcff1c98201fb7bec265d3fdb5b18e317bfbc677fb8fb1b73d0613a735d2",
+                "name": "Start Video",
+                "nameVisible": true
+              },
+              {
+                "id": "74c75900d5a0a7efcbed6dbb5dc528bc2c9247ad205562ee0ca55a48f07a2a2c",
+                "name": "Funktionen Kanzlei",
+                "nameVisible": true
+              },
+              {
+                "id": "593895fbdae93476dde146741c38bc71738db0075b053693c1e1264abcf2be45",
+                "name": "Wie viel Prozent der Belege Ihrer Mandanten für die Finanzbuchhaltung erhalten Sie bereits digital?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "5fdc314a8fb224a41eb7511c8c1d9d0a4d8629a87ad71f18f4a5e981c6397afb",
+                    "type": "number",
+                    "kind": "static",
+                    "reference": "scale",
+                    "label": "Scale"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-scale",
+                  "version": "3.0.1",
+                  "mode": "numeric",
+                  "from": 0,
+                  "to": 10,
+                  "stepSize": 1,
+                  "labelLeft": "0 %",
+                  "labelCenter": "50 %",
+                  "labelRight": "100%"
+                }
+              },
+              {
+                "id": "8d3c6ed178637bb305baf148100e400afce3a10bb01aebd0e33db6505a020cab",
+                "name": "Wie groß ist der Anteil der Finanzbuchhaltungen, die in Ihrer Kanzlei vollständig digital erstellt werden?",
+                "nameVisible": true,
+                "description": "Vollständig digitale Erstellung, ohne Kontierung auf Papierbelegen",
+                "slots": [
+                  {
+                    "id": "9447b4ce3c69a9e347e0dc4b8cc393562b06c4b2b232cd61b5ea1649eae4bc12",
+                    "type": "number",
+                    "kind": "static",
+                    "reference": "scale",
+                    "label": "Scale"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-scale",
+                  "version": "3.0.1",
+                  "mode": "numeric",
+                  "from": 0,
+                  "to": 10,
+                  "stepSize": 1,
+                  "labelLeft": "0 %",
+                  "labelCenter": "50 %",
+                  "labelRight": "100%"
+                }
+              },
+              {
+                "id": "edd170c9ddbd7881eb03fd412f6ff1720385868482b2d553c8121bb35b0de162",
+                "name": "Nutzen Sie eine Prozessdokumentation für die Zusammenarbeit mit Ihren Mandanten?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "ece9aa7b43a16adc133f7a521af9f89a8fd0eed56a4560cd1c47e82a7c7ae526",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "adb2996723bb46c8f2d1cc14e36778286ce03b589cd1a3a91e8a3be58ed23ca6",
+                "name": "Haben Sie einen standardisierten / Automatisierten Prozess für das Onboarding von Mandanten in DATEV Unternehmen Online?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "4dae7e1340c9cdeb6ef03827ae273da6869fca4039099466a3761b9b391ef784",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "3e1cfe8dcf311ca7e37559115d41ea4789aa7bf8cf4901c6bdbc49e2dbc97612",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "c5367dcb19326db950b681a4fd84a66927be1798c7eaa5006fb4abe17016653e",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "866dabdbe74347a9936fc36f3700d9d44f8f1a507256d0a7ca141ca1f31cf08d",
+                "clusters": [
+                  {
+                    "id": "8e5831ba687fa6fba50501de7418c0a29c1fe2174eaccca7085a2ca1909d7980",
+                    "nodes": [
+                      {
+                        "id": "11611b50fcdd05c4c3e578328b120e8cbe277ee78277ed9c86976f1e443b2034",
+                        "name": "Wie hoch schätzen Sie die den Grad der Standardisierung in diesem Prozess?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "15f7ab1e1ca9906643a27bf9b86af36ed99425491baa3d2de5ce776b852bfa3d",
+                            "type": "number",
+                            "kind": "static",
+                            "reference": "scale",
+                            "label": "Scale"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-scale",
+                          "version": "3.0.1",
+                          "mode": "numeric",
+                          "options": [
+                            {
+                              "id": "d76f4f50262a8fc1e791536415c1a2ae2415964771f1523266b5b2ded50e86f1",
+                              "name": "fsdfs"
+                            },
+                            {
+                              "id": "d61cdc8c7a64f180680dee3c861522dc27f8e32326504cca5f3f38bddc515498",
+                              "name": "auto"
+                            }
+                          ],
+                          "from": 0,
+                          "to": 10,
+                          "stepSize": 1,
+                          "labelLeft": "0%",
+                          "labelCenter": "50%",
+                          "labelRight": "100%"
+                        }
+                      },
+                      {
+                        "id": "f5bfb34b47692ac304bccf2566167ad6aead848a605ea7519e4dda095aee4450",
+                        "name": "Wie hoch schätzen Sie die den Grad der Automatisierung in diesem Prozess?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "203570e242a447d9b51aa0b09bf007d4febc14047a26ec6ec088c6bd7494c47f",
+                            "type": "number",
+                            "kind": "static",
+                            "reference": "scale",
+                            "label": "Scale"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-scale",
+                          "version": "3.0.1",
+                          "mode": "numeric",
+                          "from": 0,
+                          "to": 10,
+                          "stepSize": 1,
+                          "labelLeft": "0%",
+                          "labelCenter": "50%",
+                          "labelRight": "100%"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "93aad3bc726e9a62c98221cc301d419559ad6256dab847349a2f9f5a6c02d434",
+                    "nodes": [
+                      {
+                        "id": "3b8436890b87d570ce3fa04d14a5212c803f2f1acd848ffc47b2845bad7e6bdc",
+                        "name": "",
+                        "nameVisible": true
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "256c1aa81f7292f75363cf73668bd840a7ed9bd08d9eab743ecce98b28917474",
+                    "block": {
+                      "choice": "3e1cfe8dcf311ca7e37559115d41ea4789aa7bf8cf4901c6bdbc49e2dbc97612",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "adb2996723bb46c8f2d1cc14e36778286ce03b589cd1a3a91e8a3be58ed23ca6",
+                      "slot": "4dae7e1340c9cdeb6ef03827ae273da6869fca4039099466a3761b9b391ef784"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "315024e9aa6abd8a637fc7712b80e16fb8328d1a18da83627dbf39496315305b",
+            "nodes": [
+              {
+                "id": "b646473355782a67f3c8a6768bd64765b912c5c22bd704cbf5aadb3517cde429",
+                "name": "Stellen Sie Ihren Mandanten Auswertungen über DATEV Unternehmen Online zur Verfügung?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "0ad09c7ea7edfcf43ffd5652c2e073266ab7d7848fb7121094d49d9caf20d418",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "c71c50854a46db4641fa5c4c4aa7d67bf607fd0463beb839669dccf04ee61b51",
+                "name": "Werden Lohnabrechnungen ebenfalls über DATEV Unternehmen Online zur Verfügung gestellt?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "d58fffc9db9f29b831539ae25f8d28a9c26cd09091c07497de18c62eb4a9dec7",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "d3da24aab5362472b192d16a07bd287c6d86cda87ac24b43d60d5530276933a5",
+                "name": "Nutzen Sie alternative Cloud-Lösungen um Belege und Informationen von Mandanten einzusammeln?",
+                "nameVisible": true,
+                "description": "z.B. Dracoon, Kanzlei.land oder 5f Software",
+                "slots": [
+                  {
+                    "id": "6a079222ed0c963c5dc19edbf7da2e2284b0bdb606b0c639f3a94b9a4fde31d7",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "e81115af6aaa0576cdb0b08a2e53c7cf3ce6217fe07c6b9cf021b02cfbd90557",
+                "name": "Nutzen Sie die Funktion DATEV Periodenabschluss?",
+                "nameVisible": true,
+                "description": "z.B. um Daten automatisiert zu übermitteln, bereitzustellen und zu exportieren?",
+                "slots": [
+                  {
+                    "id": "1dadc40b9ab5997c4dc41b449c1fb02bb55a45e34643e69237c01e1e208123cd",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "59f348ba7570264e6d2a5f6906e433e7dd4e3d138e0dff7b6ddba1d7417f66dd",
+                "name": "Nutzen Sie Plan-BWA Werte, um ein Soll/Ist Vergleich für Ihre Mandanten durchzuführen?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "57eaa664191645368c7e0ed91cf7520c4d9caf647f400c96b3d5340843d3286c",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "45ad4d8d1021ef00ef7bfa50351ab21a1e6db091c8bc6fe8d2d7b619687b8033",
+                "name": "Wird die DATEV FiBu Überwachung zur Plausibilitätsprüfung und Fehlererkennung genutzt?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "34264cbde77e3912e25c407d6b6ac2557b953ebe431b1bf5a615d8212f7af448",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "2f082dc3f47e91692a22b7bef8c4adaabccc4f5d7412784785a3d70a6496cf7e",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "5d3944114f44ebd5924ad87b4596cf409d6dd8cea444970802d3d4a01300e72a",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "64f0ab5a706cfec2debcd37938aad3d1381adae22763c55ca4968259a78fb1b3",
+                "name": "Ist die DATEV Funktion \"Lastschrift einziehen\" bekannt?",
+                "nameVisible": true,
+                "description": "",
+                "slots": [
+                  {
+                    "id": "613caea71330d44f69b3e091d266e7552bf5fc18863fa4306f6706a69f3c4291",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "2f082dc3f47e91692a22b7bef8c4adaabccc4f5d7412784785a3d70a6496cf7e",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "5d3944114f44ebd5924ad87b4596cf409d6dd8cea444970802d3d4a01300e72a",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "42ca942c2b5198f4a4892448b938fa399476a71b3ea534b8238058a90e70520d",
+                "name": "Nutzen Sie DATEV Pro Check um Prozesse in Ihrer Kanzlei zu dokumentieren?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "c8367e04a0bc864ab151d00fc5da1f9981d85f14933f2926ce4309071a4454f6",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "44d7e7db4efb8af22c9bc1dcbbbfa7b750207c55c84ee697a884536710fab7b0",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "2d53c60788d444f51fd26c38e2a65156641c7b27311653839788a28388e0752a",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "d3b74e89d5d3b485d478a4835bbd47210b388621ca05fed2aac884b1e01fe8cb",
+            "nodes": [
+              {
+                "id": "2fb02496e49e44ed57e9b566541ec40e1e1bd7c52123469727e44631169f3e27",
+                "name": "Funktionen Mandant",
+                "nameVisible": true
+              },
+              {
+                "id": "030aee02750a566874900441637362518f3d07ecf8832890857a6ab4106e9154",
+                "name": "Nutzen Mandanten die digitale Personalakte in DATEV Unternehmen Online?",
+                "nameVisible": true,
+                "description": "",
+                "slots": [
+                  {
+                    "id": "5c7009d0c824b4f948b8e21735ba0dfa24c7715682466c3afe043a3e4e085b1b",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c0a003ba044a2a88c73dc79d7e483f9bc06177523df42bb8f8eace5652dad573",
+                      "name": "Ja",
+                      "score": 1
+                    },
+                    {
+                      "id": "110a557d4e4f814560e98e1fb006b310146eef64991701597e67b9bd823bdeba",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "61497f81fbae7b8ef07bb51972a6922f4173eb43fe22481c7f1918fde12e88da",
+                "name": "Welche Art der Belegerfassung nutzen Ihre Mandanten hauptsächlich in DATEV Unternehmen Online?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "08ae42d2f8883c8c9053464cdd965dafbf45276589cff55a55ccd7af0631bd4d",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "e786048f0c4ca5c9f5de8ff93c507a57d13015377dafe4c4c6e291d79b9b461b",
+                      "name": "Belegerfassung Standard"
+                    },
+                    {
+                      "id": "f7c858fa2a73140c18d85e1cc297ca4faca4c2cdb5a0aa1c5ed38dbe668a6e96",
+                      "name": "Belegerfassung Erweitert"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "743b876993438c2d44873a8d74678cd912f1996b4accc6b7a5178bed8fcad1df",
+                "clusters": [
+                  {
+                    "id": "51c73290b0bc93d1aef384b31718a6efbf3f9987bda71c0f140aa19edaabb464",
+                    "nodes": [
+                      {
+                        "id": "66f168b9e1f6545063f7557c6d4471540434a67d3e6fa104b05c8d51acfa01b0",
+                        "name": "Was sind die Hauptgründe, warum Ihre Mandanten hauptsächlich die Belegerfassung Standard nutzen?",
+                        "nameVisible": true,
+                        "description": "(Mehrfachantworten möglich)",
+                        "slots": [
+                          {
+                            "id": "cfb99a072609c2e85e1ecc2d55eb733b00ea3196f83d47beb5ee738a3f484c00",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "893817f91582ca51c3b861e7f3867d47a0a10682f21b5d6e260fa38f59ff576c",
+                            "sequence": 0,
+                            "label": "Checkbox",
+                            "name": "Sorge, dass Belege falsch / nicht korrekt erfasst und zugeordnet werden",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "dac16386f8773470c1a6922e963766a8693983271fd5580ffef988f2a3a3185b",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "f5e99402f0561f9231eefb736c6d379b2a91d9f93206c539991845aab5fd0aad",
+                            "sequence": 1,
+                            "label": "Checkbox",
+                            "name": "Mandant ist die Funktion \"Belegerfassung Erweitert\" nicht bekannt",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "c508fd84ae071067b39bd342c6b384f98c9f506ed29aa2b14801a8ccbf048858",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "b5c098602d9c5adaa1ad48f7a6b0122f767c035224d5f63e3eed6ce6b62b04a7",
+                            "sequence": 2,
+                            "label": "Checkbox",
+                            "name": "Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "496b0462d727ad8c962f3950f585e433addfbf811d9f2bc752f975c7ad33e82d",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "783b1029a87f4d11f41bff9935313f5c9c5323250154d9f40b070a8fbf05f10a",
+                            "sequence": 3,
+                            "label": "Checkbox",
+                            "name": "Sonstiges",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "fcb861f6a0a2b5996a560039a89bfd350e2ef2cd89af1e8fcef799467280924b",
+                            "type": "number",
+                            "kind": "feature",
+                            "reference": "counter",
+                            "label": "Counter",
+                            "exportable": false
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-checkboxes",
+                          "version": "6.0.1",
+                          "checkboxes": [
+                            {
+                              "id": "893817f91582ca51c3b861e7f3867d47a0a10682f21b5d6e260fa38f59ff576c",
+                              "name": "Sorge, dass Belege falsch / nicht korrekt erfasst und zugeordnet werden"
+                            },
+                            {
+                              "id": "f5e99402f0561f9231eefb736c6d379b2a91d9f93206c539991845aab5fd0aad",
+                              "name": "Mandant ist die Funktion \"Belegerfassung Erweitert\" nicht bekannt"
+                            },
+                            {
+                              "id": "b5c098602d9c5adaa1ad48f7a6b0122f767c035224d5f63e3eed6ce6b62b04a7",
+                              "name": "Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen"
+                            },
+                            {
+                              "id": "783b1029a87f4d11f41bff9935313f5c9c5323250154d9f40b070a8fbf05f10a",
+                              "name": "Sonstiges"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "c63fa22e30cc7f63ef035bb6d305e3f98363de578e0355da7986cf33904cc4b2",
+                    "block": {
+                      "choice": "e786048f0c4ca5c9f5de8ff93c507a57d13015377dafe4c4c6e291d79b9b461b",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "61497f81fbae7b8ef07bb51972a6922f4173eb43fe22481c7f1918fde12e88da",
+                      "slot": "08ae42d2f8883c8c9053464cdd965dafbf45276589cff55a55ccd7af0631bd4d"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "381beef1b77bc0ec7a149286444d8dfba7f509aa244632de872bc1b9db0feec9",
+                "clusters": [
+                  {
+                    "id": "34a22a27a1303f17076cfb0e444afdd6849b1fb786a5b045c608afc95dd98e10",
+                    "nodes": [
+                      {
+                        "id": "0e42e8b21ceda3b7a8d0beb6d800a71762e7f6804427e6e3838823f301f11d55",
+                        "name": "Wird von Ihren Mandanten das Kassenbuch online zur Vorerfassung von Kassenbewegungen genutzt?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "c3123f428f5990cf97181feeee4897965feefeefa9588e7ba141ee205e782963",
+                            "type": "string",
+                            "kind": "static",
+                            "reference": "choice",
+                            "label": "Choice"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-multiple-choice",
+                          "version": "5.0.3",
+                          "choices": [
+                            {
+                              "id": "5bd1d426ca6d852e59aaba518dec1c5ed07053a88fe8969a85a67cdd91d86dfa",
+                              "name": "Ja"
+                            },
+                            {
+                              "id": "cc267bac5a15dfc609daac24abe6dc02ab10fbfb786286dc9ee16165ca0eb96b",
+                              "name": "Nein"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "branches": [
+                      {
+                        "id": "1b407d6159a778af488893416d360c3f911dbd5b7a3f59d28905f7717addc46d",
+                        "clusters": [
+                          {
+                            "id": "692a5e923e9b743b975adc1bfa6c19d0205317ab4dffedca21f343c706ab168f",
+                            "nodes": [
+                              {
+                                "id": "95a6ef862c9679b1728d5d9bf64b78ab1f0cd933790a7bfac054486661e26026",
+                                "name": "Wie groß ist in etwa der Anteil der Mandanten, die das Kassenbuch online nutzen?",
+                                "nameVisible": true,
+                                "slots": [
+                                  {
+                                    "id": "b1891f349ce4f89546bef20208128b3854efc78d18a31e1bb1e07242ee1b469b",
+                                    "type": "number",
+                                    "kind": "static",
+                                    "reference": "scale",
+                                    "label": "Scale"
+                                  }
+                                ],
+                                "block": {
+                                  "type": "tripetto-block-scale",
+                                  "version": "3.0.1",
+                                  "mode": "numeric",
+                                  "from": 0,
+                                  "to": 10,
+                                  "stepSize": 1,
+                                  "labelLeft": "0%",
+                                  "labelCenter": "50%",
+                                  "labelRight": "100%"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "id": "27f255615890ff3bf47e26318333390fdaf521be453f3334278779ce520ad5be",
+                            "block": {
+                              "choice": "5bd1d426ca6d852e59aaba518dec1c5ed07053a88fe8969a85a67cdd91d86dfa",
+                              "type": "tripetto-block-multiple-choice",
+                              "version": "5.0.3",
+                              "node": "0e42e8b21ceda3b7a8d0beb6d800a71762e7f6804427e6e3838823f301f11d55",
+                              "slot": "c3123f428f5990cf97181feeee4897965feefeefa9588e7ba141ee205e782963"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "4ed2953829a0981ade617880537b7cd11efb99ecb9dda5acd007d3a63228f599",
+                        "clusters": [
+                          {
+                            "id": "4bc4a63c3b59520846e5739f17cf4f19d27458818394c4be1a64279ecc0a1a5c",
+                            "nodes": [
+                              {
+                                "id": "7812dc31f786b8258814d681cabb6e361b3cd7325e4c3bc93c09eb895d2d1bea",
+                                "name": "Was sind die Hauptgründe, warum Ihre Mandanten das Kassenbuch online nicht nutzen?",
+                                "nameVisible": true,
+                                "slots": [
+                                  {
+                                    "id": "3fba1b53221b752ac9e415779f442d1b93d94b9e0c5babb0c4c5b204f8b575d4",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "8654f2f8e31dc91a8a95d5802590fac4e26cc045cfcfd7ee1c653f31ba54f0b3",
+                                    "sequence": 0,
+                                    "label": "Checkbox",
+                                    "name": "Vorsystem des Mandanten erfasst Kassenbewegungen",
+                                    "required": true,
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "7a00f855423539c2fa49c020f40d4c548286825da181e6baa9e6490f20587f30",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "334536a475eb5d275a7da2741797dd8007ba5551fd4467ae4b04284917b137fe",
+                                    "sequence": 1,
+                                    "label": "Checkbox",
+                                    "name": "Mandant ist die Funktion \"Kassenbuch online\" nicht bekannt",
+                                    "required": true,
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "0aa179211f0f3f7f698ff6a9533df6215caf9555c632fe538a0a7d7dedb3f54c",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "a65bfe24f7f0c03987ffa87d8ec501a85abfd1918b465a26379b5a33051ea42a",
+                                    "sequence": 2,
+                                    "label": "Checkbox",
+                                    "name": "Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen",
+                                    "required": true,
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "53cbbae984de9b799a669e45e8477fa3d727a669186a324bce98b35a5b51c5f1",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "9ee6ce47004d605b06562174690467283a28f844d4f3462a9569047dd67af9a9",
+                                    "sequence": 3,
+                                    "label": "Checkbox",
+                                    "name": "Sonstiges",
+                                    "required": true,
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "b807674cc22b0fc340ec5e2880c451c56b02ca0edfe14fa665743b44df70a044",
+                                    "type": "number",
+                                    "kind": "feature",
+                                    "reference": "counter",
+                                    "label": "Counter",
+                                    "exportable": false
+                                  }
+                                ],
+                                "block": {
+                                  "type": "tripetto-block-checkboxes",
+                                  "version": "6.0.1",
+                                  "checkboxes": [
+                                    {
+                                      "id": "8654f2f8e31dc91a8a95d5802590fac4e26cc045cfcfd7ee1c653f31ba54f0b3",
+                                      "name": "Vorsystem des Mandanten erfasst Kassenbewegungen"
+                                    },
+                                    {
+                                      "id": "334536a475eb5d275a7da2741797dd8007ba5551fd4467ae4b04284917b137fe",
+                                      "name": "Mandant ist die Funktion \"Kassenbuch online\" nicht bekannt"
+                                    },
+                                    {
+                                      "id": "a65bfe24f7f0c03987ffa87d8ec501a85abfd1918b465a26379b5a33051ea42a",
+                                      "name": "Mandant möchte über DATEV Unternehmen Online lediglich die Belege zur Verfügung stellen"
+                                    },
+                                    {
+                                      "id": "9ee6ce47004d605b06562174690467283a28f844d4f3462a9569047dd67af9a9",
+                                      "name": "Sonstiges"
+                                    }
+                                  ],
+                                  "required": true
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "id": "76c46de37ac55a2539add88b6aaab57d9dec420aeb0878e5109e53e58761fc28",
+                            "block": {
+                              "choice": "cc267bac5a15dfc609daac24abe6dc02ab10fbfb786286dc9ee16165ca0eb96b",
+                              "type": "tripetto-block-multiple-choice",
+                              "version": "5.0.3",
+                              "node": "0e42e8b21ceda3b7a8d0beb6d800a71762e7f6804427e6e3838823f301f11d55",
+                              "slot": "c3123f428f5990cf97181feeee4897965feefeefa9588e7ba141ee205e782963"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3c8e58d1bccb5efbe531b49572dbff33d90c6896f3ea72bddd753475169ebf8d",
+                    "nodes": [
+                      {
+                        "id": "cdd0c5967e53e3e420490b0e3a4980d76a7b259ef3166de66fdb11d82639253b",
+                        "name": "Wie erfolgt die Abwicklung des Zahlungsverkehrs bei Ihren Mandanten?",
+                        "nameVisible": true,
+                        "description": "(Mehrfachantworten möglich)",
+                        "slots": [
+                          {
+                            "id": "9e87ef46916a9c32f16b3ef3119b3e97bf723017d23be57f2f0f0c868f214517",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "f83e6d5fd388b395f4f52ff1f21121bec5a227dfac469b6cef9e07df09720af7",
+                            "sequence": 0,
+                            "label": "Checkbox",
+                            "name": "Durch den Mandanten selbst über DATEV Unternehmen Online",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "e4e968e00798fc1bb6deefd48c10d2f93b2a8cd47cd41563d44520d34d59005f",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "65ae04cf1a8378ebc33d855b5595678e09d6a71d1c9b6d149b77960d7cbdec62",
+                            "sequence": 1,
+                            "label": "Checkbox",
+                            "name": "Durch die Kanzlei über den DATEV Zahlungsverkehr",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "eb25d6685c1275a5b839b861bc855f56c765568ecc405afaa275dde08116fb7a",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "6b19d5f7003fc41b90e4a6422afeae5158b3e0264db72859f311b91c445d1eff",
+                            "sequence": 2,
+                            "label": "Checkbox",
+                            "name": "Durch Drittanwendungen des Mandanten außerhalb von DATEV",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "a3de08df9882c0f4d1ca0ff7987e7f78d194edef297c88d6d5d13dc601f0c9a4",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "1f4f52734854057e7576e1cc88439d9ba2a174b439bb380ae2d1cd7c08a25581",
+                            "sequence": 3,
+                            "label": "Checkbox",
+                            "name": "Sonstiges",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "46506c36ea65b8772c0c219976dd78f90cf02fe1c08a930bb9c6ddbb0ac1edbb",
+                            "type": "number",
+                            "kind": "feature",
+                            "reference": "counter",
+                            "label": "Counter",
+                            "exportable": false
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-checkboxes",
+                          "version": "6.0.1",
+                          "checkboxes": [
+                            {
+                              "id": "f83e6d5fd388b395f4f52ff1f21121bec5a227dfac469b6cef9e07df09720af7",
+                              "name": "Durch den Mandanten selbst über DATEV Unternehmen Online"
+                            },
+                            {
+                              "id": "65ae04cf1a8378ebc33d855b5595678e09d6a71d1c9b6d149b77960d7cbdec62",
+                              "name": "Durch die Kanzlei über den DATEV Zahlungsverkehr"
+                            },
+                            {
+                              "id": "6b19d5f7003fc41b90e4a6422afeae5158b3e0264db72859f311b91c445d1eff",
+                              "name": "Durch Drittanwendungen des Mandanten außerhalb von DATEV"
+                            },
+                            {
+                              "id": "1f4f52734854057e7576e1cc88439d9ba2a174b439bb380ae2d1cd7c08a25581",
+                              "name": "Sonstiges"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "fe0070cbf070a140629d0ea22d4944069412b04237f24ec26afce229fc081882",
+                        "name": "Haben Sie Ihre Mandanten auf die Möglichkeit zur Kostenstellenrechnung in der erweiterten Belegerfassung aufmerksam gemacht?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "87b95d44deb839ab15e7936ed82b37d1492a8477a7c2cacedaaf13bb0593a68c",
+                            "type": "string",
+                            "kind": "static",
+                            "reference": "choice",
+                            "label": "Choice"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-multiple-choice",
+                          "version": "5.0.3",
+                          "choices": [
+                            {
+                              "id": "8063a48e8f0d3e9413e767fa1d8ea08dcb74afacd6d56075b36536e8e21ae415",
+                              "name": "Ja"
+                            },
+                            {
+                              "id": "0a7780dcb23f6c5e43b20385001a97d2ff48fa71d714e70b95d39ebf7747fcf0",
+                              "name": "Nein"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "6ced7a01dd474798f080d5d924120f49d33fdd351f38dc951aa63810a0c1c617",
+                    "block": {
+                      "choice": "f7c858fa2a73140c18d85e1cc297ca4faca4c2cdb5a0aa1c5ed38dbe668a6e96",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "61497f81fbae7b8ef07bb51972a6922f4173eb43fe22481c7f1918fde12e88da",
+                      "slot": "08ae42d2f8883c8c9053464cdd965dafbf45276589cff55a55ccd7af0631bd4d"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "694355a7cd6c17cef07fc9c7e40390a98bb46bb69dc876fe1b6fd4960f115e76",
+            "nodes": [
+              {
+                "id": "b5805a1e25590e98d05bf47fb0a07f43a6743c1476bdde668aae62e84f3830ed",
+                "name": "Nutzen Mandanten hauptsächlich ein zentrales Medium, um Rechnungen digital zu empfangen?",
+                "nameVisible": true,
+                "description": "z.B. eine einheitliche E-Mail Adresse",
+                "slots": [
+                  {
+                    "id": "6207933a9a62eb7209db17f19c5a8b7bfeeffc6d7e8164d862836092d0f68c21",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "fd462230c6d23e222bb778e8b86d86b5719f2446b4d2f6992fc02e6204b09f2f",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "dedee7f2bb11f97f7ff510adb578c87d40f3e2e1c8eff61ef1839d60c2e632af",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "8dbe1eda1b55d1b2862b5cb0cb5a72e4dd8f26be5fa63e64755e7b1bf831d40d",
+                "name": "Wie vertraut sind Ihre Mandanten in Bezug auf die verschiedenen Möglichkeiten, Belege in DATEV Unternehmen Online hochzuladen?",
+                "nameVisible": true,
+                "description": "(1=weniger vertraut, 5= sehr vertraut)",
+                "slots": [
+                  {
+                    "id": "48999894ef40a612caacf7ce59c2f739529f590622469f87c1d7dd4662e3487e",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "6b6a74045927991a5bda2ef8622dc5bf86056a02a0a9a3257a71bf28403250fb",
+                    "sequence": 0,
+                    "label": "Matrix row",
+                    "name": "DATEV.de/upload",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "17547fde32efd73c719669e807270eba856af9394592c7a5e3992a45c570d499",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "37f5ff535ef8b5257c491fb7eb47f5aca4bcae61e3465cb584a722c06db6bbe7",
+                    "sequence": 1,
+                    "label": "Matrix row",
+                    "name": "DATEV Upload Mail nach jeweiligem Belegtyp",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "8cab71d8a0579fe6f7eaa1c26158b7c3417021f889e8437e49375e273d0ec4ff",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "734e56a9b121baf97e36b1d30f34ecbec80ca706b7f2f8de8169583e4471cab5",
+                    "sequence": 2,
+                    "label": "Matrix row",
+                    "name": "DATEV Upload Mobil App",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "38825faaacf3b6cb6d7f900761bf9d6e74e920c3a0a8a5f50c7e526a545fa406",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "47d6e4563733ab2de030ce865cc8189a992005faffa047ea8174ad92bcfdea16",
+                    "sequence": 3,
+                    "label": "Matrix row",
+                    "name": "DATEV Belegtransfer online",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "2726f8cf6b0901d72eca70c54fb5183e724409c7a27a261b11a187ee2d4d5e79",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "793b39bdc6bdc0a1b0160bedc7104e97fbd1c9f59161f1c07710af02e88418a9",
+                    "sequence": 4,
+                    "label": "Matrix row",
+                    "name": "DATEV Connect online",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-matrix",
+                  "version": "4.1.0",
+                  "columns": [
+                    {
+                      "id": "d23936939e81608926cff347fde8162c6004a6c3946e830ff14395d66741ecd4",
+                      "label": "1"
+                    },
+                    {
+                      "id": "076db15068881487ef30dcacafa24a712fe360753dc76f455913a1a91da677aa",
+                      "label": "2"
+                    },
+                    {
+                      "id": "eb7a2d53dd465c25e2646ce26332236d345d322fc0af4e3b8c31d2c7c43b05df",
+                      "label": "3"
+                    },
+                    {
+                      "id": "ff5bd56c9beb194bf941df7d6bb9c4a82aace7c77569b3d2e13b71faf7cffafc",
+                      "label": "4"
+                    },
+                    {
+                      "id": "e97cd45d0301a5362cbc84ce76d301372f96019365ee53c27827598cb63e7088",
+                      "label": "5"
+                    }
+                  ],
+                  "rows": [
+                    {
+                      "id": "6b6a74045927991a5bda2ef8622dc5bf86056a02a0a9a3257a71bf28403250fb",
+                      "name": "DATEV.de/upload"
+                    },
+                    {
+                      "id": "37f5ff535ef8b5257c491fb7eb47f5aca4bcae61e3465cb584a722c06db6bbe7",
+                      "name": "DATEV Upload Mail nach jeweiligem Belegtyp"
+                    },
+                    {
+                      "id": "734e56a9b121baf97e36b1d30f34ecbec80ca706b7f2f8de8169583e4471cab5",
+                      "name": "DATEV Upload Mobil App"
+                    },
+                    {
+                      "id": "47d6e4563733ab2de030ce865cc8189a992005faffa047ea8174ad92bcfdea16",
+                      "name": "DATEV Belegtransfer online"
+                    },
+                    {
+                      "id": "793b39bdc6bdc0a1b0160bedc7104e97fbd1c9f59161f1c07710af02e88418a9",
+                      "name": "DATEV Connect online"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "f13dcb7dbc53e1faabe3319718a279c413f09a3169a61f0fe0d10c524eaf02dc",
+                "name": "Werden neben den Standardbelegtypen individuelle Belegtypen in DATEV Unternehmen Online genutzt?",
+                "nameVisible": true,
+                "description": "Standardbelegtypen sind i.d.R. Rechnungseingang, Rechnungsausgang, Kasse, Sonstiges)",
+                "slots": [
+                  {
+                    "id": "22dea49ed5e45e995e919fe996bdaa870867d2d6e082d9c9ac0864ba8fda134c",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "a32a4b0124a9ea7cd10361c3c969bf2168e2d03d94c491f716f42fae56759db2",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "e09c53c3b1d29e2f370763bcac9077586c4c7440ff2650c5c5a22692eb71ea9f",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "cd976619a4dd021d114bf7143341f846f2bab903d1a410775bc3bf505fc244ea",
+                "clusters": [
+                  {
+                    "id": "5847fa9d9ef38dd84424f3c6b6218576d7b247dc05844173acbe77ac2ef50f50",
+                    "nodes": [
+                      {
+                        "id": "946ffba2aff09e4269f6275ac1450727b1a59b5d92acf2065b3c85e530a615c6",
+                        "name": "Welche zusätzlichen Belegtypen werden hierfür genutzt?",
+                        "nameVisible": true,
+                        "description": "(Mehrfachantworten möglich)",
+                        "slots": [
+                          {
+                            "id": "859b5ca14e43ebdc3a3e888dab87601fb92e4584f0702ec59f0fd6b8afe18b41",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "b08864edf3a3ac6a68d55090f89559c3ecc89a6031ddcab292a55227531ed151",
+                            "sequence": 0,
+                            "label": "Checkbox",
+                            "name": "Auslagen",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "d18de277845a7d2b679a31cde04cd60daeadbb2f8845a1212e6943dcfbc99ff2",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "e21d0c12c10be77089600a55981fe2499215d5536df0de3d43e91a78fb03d400",
+                            "sequence": 1,
+                            "label": "Checkbox",
+                            "name": "Kreditkarten",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "7bacc796008a373f7afd7f06f2fd001480cb25460935fe319a3b6784cdb93c62",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "d99961d6b0251515691f13985c9a329f5f63e3bb00ed61974c8c7d35a92f3598",
+                            "sequence": 2,
+                            "label": "Checkbox",
+                            "name": "Nachgereichte Belege",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "9da7dd7d7c91a499ec994921461622ae3f1de8a6572fbd02730b6b4cbf38f36b",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "d0bfb1c38fdf60204d943dc71569cb783d9e3a595c0cd42c7a5d85164e618df7",
+                            "sequence": 3,
+                            "label": "Checkbox",
+                            "name": "Sonstiges",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "8f8987f418eb52dac2af31d0b45e5b209007984bf4d81e1de59cc2cc4f7350be",
+                            "type": "number",
+                            "kind": "feature",
+                            "reference": "counter",
+                            "label": "Counter",
+                            "exportable": false
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-checkboxes",
+                          "version": "6.0.1",
+                          "checkboxes": [
+                            {
+                              "id": "b08864edf3a3ac6a68d55090f89559c3ecc89a6031ddcab292a55227531ed151",
+                              "name": "Auslagen"
+                            },
+                            {
+                              "id": "e21d0c12c10be77089600a55981fe2499215d5536df0de3d43e91a78fb03d400",
+                              "name": "Kreditkarten"
+                            },
+                            {
+                              "id": "d99961d6b0251515691f13985c9a329f5f63e3bb00ed61974c8c7d35a92f3598",
+                              "name": "Nachgereichte Belege"
+                            },
+                            {
+                              "id": "d0bfb1c38fdf60204d943dc71569cb783d9e3a595c0cd42c7a5d85164e618df7",
+                              "name": "Sonstiges"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "345ffe0a39a631cbaf8ff29fefa64f4085e83b641258b5ec55219ddbdff6ede0",
+                    "block": {
+                      "choice": "a32a4b0124a9ea7cd10361c3c969bf2168e2d03d94c491f716f42fae56759db2",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "f13dcb7dbc53e1faabe3319718a279c413f09a3169a61f0fe0d10c524eaf02dc",
+                      "slot": "22dea49ed5e45e995e919fe996bdaa870867d2d6e082d9c9ac0864ba8fda134c"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "16a57a1dabb82801b67f002bba359dd67ec9e21a6804ea3dcca0d7f236441f8c",
+            "nodes": [
+              {
+                "id": "0827234f649a737f7099956d7d0a736acebe2c9de9512485269e5948468dae06",
+                "name": "Schnittellen Section",
+                "nameVisible": true
+              },
+              {
+                "id": "871982dd42289e91f2c4bf35af527091ea413d0ad72493f448aa7b947e193def",
+                "name": "Nutzen Ihre Mandanten vorgelagerte Buchhaltungssysteme?",
+                "nameVisible": true,
+                "description": "z.B. SevDesk, Buchhaltungsbutler, LexOffice",
+                "slots": [
+                  {
+                    "id": "1f2603176b6a1d2ba00137de58cc3dc06a221e7aa439586b98d939b05a9f4b60",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c60623d2afe2cc20ea183308c0a1b2ddb86880cba549c8d516d5ab645a31d700",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "b84b1b95dc6c2b2f3b48fe50fdc2de56892b9637527e728b53093f8b8fa84ac9",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "5c01533026361dc7545172d9951b5ba1b1604a84799d0bdbfe0098b8ad4317db",
+                "clusters": [
+                  {
+                    "id": "1c14084fc1303ecfb36828ae15cbd8d9fb600a2bb7a33bd2667f654162dd4ed8",
+                    "nodes": [
+                      {
+                        "id": "1a6b51e5872ee6f2263cd9e79092442dcf5d6a8e82205c70b70eaead1d441286",
+                        "name": "Wie reibungslos funktioniert die Integration dieser vorgelagerten Buchhaltungssysteme in Kanzlei Rechnungswesen?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "6f45cedef9da4622fe7f7c90b34de3eecacd4a7c4560b05aca9807981a5dc6a4",
+                            "type": "number",
+                            "kind": "static",
+                            "reference": "scale",
+                            "label": "Scale"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-scale",
+                          "version": "3.0.1",
+                          "mode": "numeric",
+                          "from": 0,
+                          "to": 5,
+                          "stepSize": 1,
+                          "labelLeft": "stockend",
+                          "labelCenter": "",
+                          "labelRight": "reibungslos"
+                        }
+                      },
+                      {
+                        "id": "2d5d427356fed62028f57cde57bbe0d346152dc3a29c00249665dd4409eea8e4",
+                        "name": "Werden die Daten aus dem Vorsystem mit Belegbildern übergeben?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "3dab21d61e3f7f0e68a0b46199df36cdb00fddfa0b053242dec77c173a66c12f",
+                            "type": "string",
+                            "kind": "static",
+                            "reference": "choice",
+                            "label": "Choice"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-multiple-choice",
+                          "version": "5.0.3",
+                          "choices": [
+                            {
+                              "id": "0db93fa90d0a4467d6fa0ef4ee72f158fc564ee1fdbaa77178d5497fd221bba3",
+                              "name": "Ja"
+                            },
+                            {
+                              "id": "3c02c23f30d6e97c79deda0657ae40ab6961b4e507ccae593c3ecbc7c17118bf",
+                              "name": "Nein"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "56786f1cd2cd20c7915b78b9e2bce6e1f30bfd30245905269887809d6223c088",
+                        "name": "Sind die Buchungsdaten aus dem Vorsystem bereits mit Zahlungen zugeordnet?",
+                        "nameVisible": true,
+                        "description": "z.B. Zuordnung über Bank, PayPal etc.",
+                        "slots": [
+                          {
+                            "id": "ab11904624ec012f3c30b6f1402d47e1360b87581ef49751713e9e12f8a73daf",
+                            "type": "string",
+                            "kind": "static",
+                            "reference": "choice",
+                            "label": "Choice"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-multiple-choice",
+                          "version": "5.0.3",
+                          "choices": [
+                            {
+                              "id": "0db93fa90d0a4467d6fa0ef4ee72f158fc564ee1fdbaa77178d5497fd221bba3",
+                              "name": "Ja"
+                            },
+                            {
+                              "id": "3c02c23f30d6e97c79deda0657ae40ab6961b4e507ccae593c3ecbc7c17118bf",
+                              "name": "Nein"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "125ab2bd507fde060e2b613d54db333cec119d09c73306c8ff1ce88a9456d687",
+                    "block": {
+                      "choice": "c60623d2afe2cc20ea183308c0a1b2ddb86880cba549c8d516d5ab645a31d700",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "871982dd42289e91f2c4bf35af527091ea413d0ad72493f448aa7b947e193def",
+                      "slot": "1f2603176b6a1d2ba00137de58cc3dc06a221e7aa439586b98d939b05a9f4b60"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "98779fde331a59df247b665a21339b329829148e426163b0761494230e3391ac",
+            "nodes": [
+              {
+                "id": "5b12d32fd8661145bfb66e10106b7a51a03cf6bc68bd11a85c51f420d8677d4b",
+                "name": "Wie vertraut fühlen Sie sich mit den folgenden Schnittstellen?",
+                "nameVisible": true,
+                "description": "(1=weniger vertraut, 5= sehr vertraut)",
+                "slots": [
+                  {
+                    "id": "b0d9e8bd7c6810edff3299bf52a292e5e1b3d7be5988c32dbdc6e1bbaf27fb7c",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "600573aa00466daf8b53f35734509125d0a72c4e2437282c0c16639aa9d548a7",
+                    "sequence": 0,
+                    "label": "Matrix row",
+                    "name": "Schnittstelle \"DATEV Format\"",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "704685b8f4d9ed947aef06d0813a59eed642a86f0e4343f2b17736eacadc4ce0",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "b3298105bb44453cd6034f2e8eb577b5f8e776b7186dd99b53ec7e16262e3e1c",
+                    "sequence": 1,
+                    "label": "Matrix row",
+                    "name": "DATEV XML Schnittstelle",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "8c979e7a4bf1cebc4e8fa94ad63ff7dd9efbc85c4361b9f94fe3ec6cad82535b",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "d08157f75fd34cced7ee3b0d923dbe3e300cfa89d7c4e72b12413b4ee111766c",
+                    "sequence": 2,
+                    "label": "Matrix row",
+                    "name": "DATEV Connect Online Schnittstelle",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  },
+                  {
+                    "id": "4177b7391a479f270a59fbbebf1a7d2547422a032dfe042dfb90147915eb2a45",
+                    "type": "string",
+                    "kind": "dynamic",
+                    "reference": "0fbb2b5120338e01e8f400a269b4d6c94e90e393bd71945750db4049671ca527",
+                    "sequence": 3,
+                    "label": "Matrix row",
+                    "name": "DATEV ASCII Schnittstelle",
+                    "pipeable": {
+                      "label": "Row",
+                      "content": "value",
+                      "legacy": "Row"
+                    }
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-matrix",
+                  "version": "4.1.0",
+                  "columns": [
+                    {
+                      "id": "17a03914050815548c2944521a4b62d77524d134a7faea19752dd0b6472f212a",
+                      "label": "1"
+                    },
+                    {
+                      "id": "504661db08e04028703509a38e59aa695860c8ade73ee6b02b2ee41d4d323b2b",
+                      "label": "2"
+                    },
+                    {
+                      "id": "f6fe0e427bf91a029a8da30aa5e31890d956773f4fb25ceff9392886c4c625e9",
+                      "label": "3"
+                    },
+                    {
+                      "id": "521aa5e77604edd761ce76909e73708123d672d183a9af3c6fadb446dfed1e04",
+                      "label": "4"
+                    },
+                    {
+                      "id": "78d0b38ece3fa3a223267ece0b65f81f25c790b3f75ca7d9b7aab33840513d4b",
+                      "label": "5"
+                    }
+                  ],
+                  "rows": [
+                    {
+                      "id": "600573aa00466daf8b53f35734509125d0a72c4e2437282c0c16639aa9d548a7",
+                      "name": "Schnittstelle \"DATEV Format\""
+                    },
+                    {
+                      "id": "b3298105bb44453cd6034f2e8eb577b5f8e776b7186dd99b53ec7e16262e3e1c",
+                      "name": "DATEV XML Schnittstelle"
+                    },
+                    {
+                      "id": "d08157f75fd34cced7ee3b0d923dbe3e300cfa89d7c4e72b12413b4ee111766c",
+                      "name": "DATEV Connect Online Schnittstelle"
+                    },
+                    {
+                      "id": "0fbb2b5120338e01e8f400a269b4d6c94e90e393bd71945750db4049671ca527",
+                      "name": "DATEV ASCII Schnittstelle"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "c5071a1213f907ccbf2432daa3b8c3a09d3526107b9f62e202ab05e106b1492c",
+                "name": "Werden Kontoumsätze automatisiert in Kanzlei Rechnungswesen eingelesen?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "f14c3260e0c38d259a46876a6837873243c9acf08ec9a204fab987981b89f807",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "c60623d2afe2cc20ea183308c0a1b2ddb86880cba549c8d516d5ab645a31d700",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "b84b1b95dc6c2b2f3b48fe50fdc2de56892b9637527e728b53093f8b8fa84ac9",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "6722ef3cfa0a87fe4b6e99df6d14850468cd32ba494feb84fc81e1eff5459e7c",
+                "clusters": [
+                  {
+                    "id": "5026ffc4cd913093bc8b3238c053e9e6d172c7ec4cfe676195cc20e637e1f161",
+                    "nodes": [
+                      {
+                        "id": "e2856bfa4ce67386a0aa2f3202441d24e5dae3f4faf2a0905b2b44c1ed7cd65c",
+                        "name": "Auf welchem Weg werden die Kontoauszüge in DATEV Unternehmen Online eingelesen?",
+                        "nameVisible": true,
+                        "description": "(Mehrfachantworten möglich)",
+                        "slots": [
+                          {
+                            "id": "5621a2b9417842c0720cef1249a8dca2fc98b1ec1b4a7a8a0cd0a94614e81534",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "eea953136bfc39aaffdbe383e8bee59216e3e1096268f82c298916a8ee1763d1",
+                            "sequence": 0,
+                            "label": "Checkbox",
+                            "name": "DATEV Rechenzentrum (z.B. Kontoauszugsmanager)",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "a3eca16b0a267a78b38b23b5d02805c52a189ed3e069e2e9d67737128fafb84e",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "941ad527253190c249449b331980025615f3459fc3614640ac98247e217a46ad",
+                            "sequence": 1,
+                            "label": "Checkbox",
+                            "name": "Drittlösung (über Anbieter wie z.B. Konvertax, Payjoe,…)",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "959ec2942b6f59c6375a85978015d87724e2592c6eecfa04ad15cea2bf904226",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "27a695002ebda09fe6a17c5acd6724cc9e4077f560322d69542d13aa84b0f806",
+                            "sequence": 2,
+                            "label": "Checkbox",
+                            "name": "Sonstiges",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "6a54ad96d1f9c9972e21c23b527e6191db2cb1eb0996e639a141282570486c01",
+                            "type": "number",
+                            "kind": "feature",
+                            "reference": "counter",
+                            "label": "Counter",
+                            "exportable": false
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-checkboxes",
+                          "version": "6.0.1",
+                          "checkboxes": [
+                            {
+                              "id": "eea953136bfc39aaffdbe383e8bee59216e3e1096268f82c298916a8ee1763d1",
+                              "name": "DATEV Rechenzentrum (z.B. Kontoauszugsmanager)"
+                            },
+                            {
+                              "id": "941ad527253190c249449b331980025615f3459fc3614640ac98247e217a46ad",
+                              "name": "Drittlösung (über Anbieter wie z.B. Konvertax, Payjoe,…)"
+                            },
+                            {
+                              "id": "27a695002ebda09fe6a17c5acd6724cc9e4077f560322d69542d13aa84b0f806",
+                              "name": "Sonstiges"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "7892e84d01377a15a6bbe9418618f148b7de92508c3c35e547ca6529f3b6af97",
+                    "block": {
+                      "choice": "c60623d2afe2cc20ea183308c0a1b2ddb86880cba549c8d516d5ab645a31d700",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "c5071a1213f907ccbf2432daa3b8c3a09d3526107b9f62e202ab05e106b1492c",
+                      "slot": "f14c3260e0c38d259a46876a6837873243c9acf08ec9a204fab987981b89f807"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b197014c2498f0a376b1f358752cb57f50b53a5254aaf2a74ff5a81d38d556b6",
+            "nodes": [
+              {
+                "id": "11d11db19ea9c589cd9b99fdd83b90ba9a9b063e9015f7a78c56d07a42ea9dce",
+                "name": "Werden Kreditkartenabrechnungen digital eingespielt?",
+                "nameVisible": true,
+                "description": "Macht es hier Sinn in DUO und Kanzlei Rewe zu fragen, oder?",
+                "slots": [
+                  {
+                    "id": "9320c98f120c0a61959c72348d78c9c625c6aa8f23757d0cfb44eb465826da31",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9d7d308c54a1f5e6981cf4781c0717e5c7b563f228e19385064ab15cbf863df7",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "658ba1356ae71a11813a36afe3f21491d1a36d39a9d984c666e6e2953a12ae93",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "d9ed8ab0d27a98f88f4849d79333cf73870094ad7c2103291af7c75848391f53",
+                "clusters": [
+                  {
+                    "id": "c59949bd1da2d1542455da8a9eda3744ee9da79af0a2c05b681301c599117613",
+                    "nodes": [
+                      {
+                        "id": "89aa982374d8161ff96456f38857a73cfc4e22896b2d3f82586ff569430e6ba8",
+                        "name": "Auf welche Art werden Kreditkartenabrechnungen in DATEV Unternehmen Online / Kanzlei Rechnungswesen eingespielt?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "4de1e0dcc6a81728de2ac04970b41126bd2162fab2a4d156017a9f2f1da014fe",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "fcb0871ebdc805f82c4f8a10ecc20960bf1b6803a219680b95eae2c38db87715",
+                            "sequence": 0,
+                            "label": "Checkbox",
+                            "name": "PLEO",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "543c7c4c6b4a8e4ad4e4674357ab67bbb2580d6b8377c22311ccda1dde79f5e7",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "f991f90fe3dd2ae773d1f33e5c78d4ec180feb2b9d969b5a5633551bde6937c4",
+                            "sequence": 1,
+                            "label": "Checkbox",
+                            "name": "Konvertierung durch Drittanbieter (z.B. GetMyInvoices)",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "7e455a958b89eab3230eba3f05bc3b51088a9d722accd99912f301ba64fd4432",
+                            "type": "boolean",
+                            "kind": "dynamic",
+                            "reference": "ae459aeabc8d37e0be7633edcca2d69f25a987a7e932f85a191f01caa9f14c16",
+                            "sequence": 2,
+                            "label": "Checkbox",
+                            "name": "Sonstiges",
+                            "pipeable": {
+                              "label": "Checkbox",
+                              "content": "name",
+                              "legacy": "Checkbox"
+                            },
+                            "labelForFalse": "Not checked",
+                            "labelForTrue": "Checked"
+                          },
+                          {
+                            "id": "ad7a86eea6acbdada70d112c2d78f4450def16f2159731cfcfa8d52d31cc584f",
+                            "type": "number",
+                            "kind": "feature",
+                            "reference": "counter",
+                            "label": "Counter",
+                            "exportable": false
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-checkboxes",
+                          "version": "6.0.1",
+                          "checkboxes": [
+                            {
+                              "id": "fcb0871ebdc805f82c4f8a10ecc20960bf1b6803a219680b95eae2c38db87715",
+                              "name": "PLEO"
+                            },
+                            {
+                              "id": "f991f90fe3dd2ae773d1f33e5c78d4ec180feb2b9d969b5a5633551bde6937c4",
+                              "name": "Konvertierung durch Drittanbieter (z.B. GetMyInvoices)"
+                            },
+                            {
+                              "id": "ae459aeabc8d37e0be7633edcca2d69f25a987a7e932f85a191f01caa9f14c16",
+                              "name": "Sonstiges"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "2e0db40ace80819170b48cf20e57027cd17b2bc93e9a37187fd996f94cf24a20",
+                    "block": {
+                      "choice": "9d7d308c54a1f5e6981cf4781c0717e5c7b563f228e19385064ab15cbf863df7",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "11d11db19ea9c589cd9b99fdd83b90ba9a9b063e9015f7a78c56d07a42ea9dce",
+                      "slot": "9320c98f120c0a61959c72348d78c9c625c6aa8f23757d0cfb44eb465826da31"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "09e6ab10f7ea3c1acb4f0fbcb18132522aeb7b1e78c92b36178a09427ae7685c",
+            "nodes": [
+              {
+                "id": "8825f95369a962c1a1303e24abfdd63a8dbb41df47dbe6f5057ff1bf188c5d65",
+                "name": "Section Life Hacks",
+                "nameVisible": true
+              },
+              {
+                "id": "2bdf79f7ff580e16fe3f4094e33c4dd926279cc92866cacf49c3fa272f1b1e61",
+                "name": "Nutzen Sie Lerndateien, um Buchungssätze zu automatisieren?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "d111989d0216bfdb23364380adeafd0014c17e48bfd295456eba1fb72c2adac5",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "1b03aba78a52f878f222ce3728cdbec60059422402bfc86aa27e7ee82b65e80c",
+                "clusters": [
+                  {
+                    "id": "014dd209d809d39420b3b1da66b7fa29d3c494eca2b46a761e977863cbd00f2f",
+                    "nodes": [
+                      {
+                        "id": "17878fd2a6f24bd8457aeba69f89235614b30fca2f77de7144fa4ce4835a7954",
+                        "name": "Gibt es einen einheitlichen Kanzleiprozess der festlegt ,welche Standardlerndateien angelegt werden müssen?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "3e3290aa984155de647dbe4cf1e17caac0912facf6e1c7af69f2def8420886ea",
+                            "type": "string",
+                            "kind": "static",
+                            "reference": "choice",
+                            "label": "Choice"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-multiple-choice",
+                          "version": "5.0.3",
+                          "choices": [
+                            {
+                              "id": "16d2ea4899ea1203aa07e268f8891b18ef722605ebd4d7408267f499aa1e0f19",
+                              "name": "Ja"
+                            },
+                            {
+                              "id": "b59d3fec2018f61ea477901e9e3a94f49e66a7c14cf0d7f5be3e6342b9a51ec2",
+                              "name": "Nein"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "branches": [
+                      {
+                        "id": "703a053806fc0a39eb3c8f23029b24a749665f797b970ddc89a8bbe65591c5d3",
+                        "clusters": [
+                          {
+                            "id": "17a2dfef28d1ae01ce63c402cb7b0f26ce86117c2a38880ec21faaa241a76984",
+                            "nodes": [
+                              {
+                                "id": "5e720d635832ce3da9adad315c7c486c93e4f2e260f9d941c76cd734fc95de37",
+                                "name": "Welche Standardlerndateien werden in Ihrer Kanzlei angelegt?",
+                                "nameVisible": true,
+                                "description": "(Mehrfachantworten möglich)",
+                                "slots": [
+                                  {
+                                    "id": "9b1b179347bcd26131e17baf90bbab4ef07f998367b378f8e75101e2bb1d9c29",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "14ae74b146f3cc48de39bcae4aaaf8251508eac3ab57fe54fb4b80f408e3a638",
+                                    "sequence": 0,
+                                    "label": "Checkbox",
+                                    "name": "Miete",
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "d79e989e57461644b2ab28b6512ca41f6c23e7c21ea120b0dc180b70b94cc3d7",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "4b31732f54e30aa30bfd2664471026f9c6749606f1e5619b856f1696b03765bf",
+                                    "sequence": 1,
+                                    "label": "Checkbox",
+                                    "name": "Beiträge",
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "9f3c2de35bf3b9f369a230596519ec0db39a32f835cdcdbf8b7692d2b564b412",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "626fbff7ff4f8ddb724f695259695bf2743905063f6ede8c00a7ab75b409082d",
+                                    "sequence": 2,
+                                    "label": "Checkbox",
+                                    "name": "Versicherungen",
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "478aade128c5b94533a2ca2777238f8a955ce80193df68cd0af6ee36a576a2ba",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "7d61b6e3b19a8d46e557db01cdf3ee9d76bb418cb90409f68df6a0b99cdf7e41",
+                                    "sequence": 3,
+                                    "label": "Checkbox",
+                                    "name": "Gebühren",
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "c09a72b5cb93c93194ea6d9892454bb169c2954610df343a7c209f910a6913e8",
+                                    "type": "boolean",
+                                    "kind": "dynamic",
+                                    "reference": "53a9d03880eff81d0ba38492d2630abf24ac409e50bc881a721400bb44b35370",
+                                    "sequence": 4,
+                                    "label": "Checkbox",
+                                    "name": "Sonstiges",
+                                    "pipeable": {
+                                      "label": "Checkbox",
+                                      "content": "name",
+                                      "legacy": "Checkbox"
+                                    },
+                                    "labelForFalse": "Not checked",
+                                    "labelForTrue": "Checked"
+                                  },
+                                  {
+                                    "id": "116da12c1a60700af352724f5ff1a259430270fb530d6825d0e0514c8401cfb5",
+                                    "type": "number",
+                                    "kind": "feature",
+                                    "reference": "counter",
+                                    "label": "Counter",
+                                    "exportable": false
+                                  }
+                                ],
+                                "block": {
+                                  "type": "tripetto-block-checkboxes",
+                                  "version": "6.0.1",
+                                  "checkboxes": [
+                                    {
+                                      "id": "14ae74b146f3cc48de39bcae4aaaf8251508eac3ab57fe54fb4b80f408e3a638",
+                                      "name": "Miete"
+                                    },
+                                    {
+                                      "id": "4b31732f54e30aa30bfd2664471026f9c6749606f1e5619b856f1696b03765bf",
+                                      "name": "Beiträge"
+                                    },
+                                    {
+                                      "id": "626fbff7ff4f8ddb724f695259695bf2743905063f6ede8c00a7ab75b409082d",
+                                      "name": "Versicherungen"
+                                    },
+                                    {
+                                      "id": "7d61b6e3b19a8d46e557db01cdf3ee9d76bb418cb90409f68df6a0b99cdf7e41",
+                                      "name": "Gebühren"
+                                    },
+                                    {
+                                      "id": "53a9d03880eff81d0ba38492d2630abf24ac409e50bc881a721400bb44b35370",
+                                      "name": "Sonstiges"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "id": "3d4e80cdd88726b768dacd86ee5e2c9debe21eb2eb20e3e3a06837172cd6cfe9",
+                            "block": {
+                              "choice": "16d2ea4899ea1203aa07e268f8891b18ef722605ebd4d7408267f499aa1e0f19",
+                              "type": "tripetto-block-multiple-choice",
+                              "version": "5.0.3",
+                              "node": "17878fd2a6f24bd8457aeba69f89235614b30fca2f77de7144fa4ce4835a7954",
+                              "slot": "3e3290aa984155de647dbe4cf1e17caac0912facf6e1c7af69f2def8420886ea"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "f45b540235d17e1aa15bd9bd5043a7910eae329ea87b0737a54b84e4202c9e52",
+                    "block": {
+                      "choice": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "type": "tripetto-block-multiple-choice",
+                      "version": "5.0.3",
+                      "node": "2bdf79f7ff580e16fe3f4094e33c4dd926279cc92866cacf49c3fa272f1b1e61",
+                      "slot": "d111989d0216bfdb23364380adeafd0014c17e48bfd295456eba1fb72c2adac5"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cf10663a89030204af202972bdeec9c28a79347249e83f69e5fc8c2470cf46a8",
+            "nodes": [
+              {
+                "id": "b4fe6e79a7eaf7fe71c11c8a2f9aff5a40872aa2cb91f06fa8d6fe2e66a25bfe",
+                "name": "Grenzen Sie Aufwands- und Ertragsbuchungen unterjährig ab und nutzen Sie wiederkehrende Buchungen, um die Abgrenzungsposten wieder aufzulösen?",
+                "nameVisible": true,
+                "description": "z.B. Aktive und Passive Rechnungsabgrenzungsposten",
+                "slots": [
+                  {
+                    "id": "e4c09c164b9fd5513a558bbce4a756e34110f73b3a6e947386714febe8726ebd",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "cfd8bd89c5ebfaf97a29bc11c56126f33e7252d6e7362d6f084dde4743742eb2",
+                "name": "Nutzen Sie DATEV spezifische Tastenkombinationen in Kanzlei Rechnungswesen?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "17057b863d20da8e12a62fb00d8db66cf5133fb0bc96b38180307762ee5e8386",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "15429fca8ceb5d3fa35e74336f412642c0d10e28d39032b8dd58c45df988b508",
+            "nodes": [
+              {
+                "id": "099aaa1e4ed5f6cf8a21092b40777482975c7ee1e9f92ec3e10ad53e5765e287",
+                "name": "Nutzen Sie die DATEV Kontonotizfunktion, um Hinweise zu speziellen Konten zu vermerken?",
+                "nameVisible": true,
+                "slots": [
+                  {
+                    "id": "8c58cb13704e3df3bd153bc480de2094477e7256f2e98d12a5bfdd7a2fc2f285",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "8db6b68671783f8e419ba641b52f6d2168f62b90368e60bf2ccb3d36d90317b1",
+                "name": "Nutzen Sie individuelle Steuerschlüssel, um automatisiert Umbuchungen vorzunehmen?",
+                "nameVisible": true,
+                "description": "z.B. Bewirtungsaufwendungen automatisierte in abziehbarer und nicht abziehbarer Teil aufteilen",
+                "slots": [
+                  {
+                    "id": "7eca689744124d6ade0ab5a4b08744007dbf46a0b9acfdf2572d082534b87751",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "999880cf355598e3215f5a8b4780a4a12730b6b67d3b786e5fcebb69d0df3ce3",
+                "name": "Verwenden Sie die Funktion Aufteilung von Belegen in DATEV um „Splittbuchungen“ vorzunehmen?",
+                "nameVisible": true,
+                "description": "",
+                "slots": [
+                  {
+                    "id": "698793de08c4b4835b2ce80b3a11646fcdfacc5d7377e685ab640c4c3ffa2b34",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "a9efee0c7dbac27dc51b92efc9fd50cb4013c2e2f13cf1141d879026f1290031",
+                "name": "Werden Anzahlungen über die Funktion \"Anzahlung Buchen\" in DATEV genutzt?",
+                "nameVisible": true,
+                "description": "",
+                "slots": [
+                  {
+                    "id": "c3e539a6657eaae7d4d53baab414b2c2fd31599f6f97ece6a1ae814ad2c9dece",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "1f6febe334299569c931c618510e0597befe308ee9c0019bd26c014330d99b8e",
+                "name": "Verknüpfen Sie wichtige Dokumente aus dem DMS mit entsprechenden Konten in Kanzlei Rechnungswesen?",
+                "nameVisible": true,
+                "description": "z.B. Dauerrechnungen",
+                "slots": [
+                  {
+                    "id": "5416d6224c55e5eaebf8351e54016e63021b7bde58be04a96a2ae0dabed98218",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "9927af06fe54124248e8a2612bc5ca0cb28d337e866e523247345425ca10ea25",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "9d845d3c2c06fd41645de4d2b2d739ff434274923c42ed067ce02d59cf536fa0",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "5b17e935e32fa5a9679e29be36cb4383929649930098603a6144f8b60c389b81",
+                "name": "Welche Möglichkeiten zum Ausziffern von Konten nutzen Sie?",
+                "nameVisible": true,
+                "description": "(Mehrfachantworten möglich)",
+                "slots": [
+                  {
+                    "id": "26d6825c314a68b0e3a0ceecd419f0ac344e3a97cbf6760357243d0870533b75",
+                    "type": "boolean",
+                    "kind": "dynamic",
+                    "reference": "609f750a64fd5e00c33d1d2c5ca805a97ed4be7f94c9dae35aad09bf6f3a9228",
+                    "sequence": 0,
+                    "label": "Checkbox",
+                    "name": "Automatischer Abgleich",
+                    "pipeable": {
+                      "label": "Checkbox",
+                      "content": "name",
+                      "legacy": "Checkbox"
+                    },
+                    "labelForFalse": "Not checked",
+                    "labelForTrue": "Checked"
+                  },
+                  {
+                    "id": "75c083afe19f5e4bec24f6ea878a27b92e3d5a7ad0ab168d60e26da365c200ee",
+                    "type": "boolean",
+                    "kind": "dynamic",
+                    "reference": "8983795ea01852207399b295e4789dc9f14cab588bb6c31c984bfe25f97763f6",
+                    "sequence": 1,
+                    "label": "Checkbox",
+                    "name": "Manuelle Zuordnung",
+                    "pipeable": {
+                      "label": "Checkbox",
+                      "content": "name",
+                      "legacy": "Checkbox"
+                    },
+                    "labelForFalse": "Not checked",
+                    "labelForTrue": "Checked"
+                  },
+                  {
+                    "id": "ffb71a639ca7cd591e61e0a99f9c0856f305264e2a58c88ad77225b3b46af121",
+                    "type": "number",
+                    "kind": "feature",
+                    "reference": "counter",
+                    "label": "Counter",
+                    "exportable": false
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-checkboxes",
+                  "version": "6.0.1",
+                  "checkboxes": [
+                    {
+                      "id": "609f750a64fd5e00c33d1d2c5ca805a97ed4be7f94c9dae35aad09bf6f3a9228",
+                      "name": "Automatischer Abgleich"
+                    },
+                    {
+                      "id": "8983795ea01852207399b295e4789dc9f14cab588bb6c31c984bfe25f97763f6",
+                      "name": "Manuelle Zuordnung"
+                    }
+                  ]
+                }
+              }
+            ],
+            "branches": [
+              {
+                "id": "a0e1d886950413e462267e0baea6f1a0c4180fc393fd3b86ed00b654861d2a1b",
+                "clusters": [
+                  {
+                    "id": "d52bc7ba502281edaa03caa2dbc0cdd06cdcd0faabafedd73758fdca62b88dda",
+                    "nodes": [
+                      {
+                        "id": "7ee9edfcae8a3a11271704db8e94cf159fb03fcfd7a29e601c5a3d95fa3ee948",
+                        "name": "Welches ist die am häufigsten verwendete automatische Ausgleichsart?",
+                        "nameVisible": true,
+                        "slots": [
+                          {
+                            "id": "1c9996e8b493cad08f74f102693d630c2318ff2c4764917077cb467938275c2a",
+                            "type": "string",
+                            "kind": "static",
+                            "reference": "choice",
+                            "label": "Choice"
+                          }
+                        ],
+                        "block": {
+                          "type": "tripetto-block-multiple-choice",
+                          "version": "5.0.3",
+                          "choices": [
+                            {
+                              "id": "034bf3f55b6d626db7eaca5f6a5012e890afb39065fbbb275ea869c259c1e4c8",
+                              "name": "Belegfeld 1"
+                            },
+                            {
+                              "id": "82f54071f0200419684c27c707dc22acdd865abaa7f0e7382ab45681073b14e5",
+                              "name": "Auftragsnummer"
+                            },
+                            {
+                              "id": "9c71f303349f40b309821215ad770da82c241126402d5099fb0f0bce66a89746",
+                              "name": "Name Geschäftspartner"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "id": "9d714d8598db6c4583d05c568c6964a0703ab40ecbafb262e49884699d810b1e",
+                    "block": {
+                      "checkbox": "609f750a64fd5e00c33d1d2c5ca805a97ed4be7f94c9dae35aad09bf6f3a9228",
+                      "type": "tripetto-block-checkboxes",
+                      "version": "6.0.1",
+                      "node": "5b17e935e32fa5a9679e29be36cb4383929649930098603a6144f8b60c389b81",
+                      "slot": "26d6825c314a68b0e3a0ceecd419f0ac344e3a97cbf6760357243d0870533b75",
+                      "checked": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4b640562f927f5cb84bfaec28702c7d2a8c99ea46d0beda309d56b6a0dbe8d0b",
+            "nodes": [
+              {
+                "id": "51a0a267e91a0174bb45eecb6fda0a372f6d5961ef95d696bdf8ca1d6f3e7149",
+                "name": "Verknüpfen Sie Verträge aus dem DMS in der DATEV Anlagenbuchhaltung?",
+                "nameVisible": true,
+                "description": "",
+                "slots": [
+                  {
+                    "id": "6ae2ed53890874cc6c8c2e9e0e686d8e6022d3429f2db933ce3808f789ec3b4c",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "2ae2ff4f2a3577f6eac5f3ef71842edd7bad489354d2163efa80dd14c9df78a0",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "e23528c1a2dcdfa084791a33256d7f5242db20b7688fe147a6ae6b1dba427c02",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "d8af5e9b10d1ddc022e777f203787eda56a6fbf7292d47004adb05a29749da1c",
+                "name": "Nutzen Sie die automatisierte Anlage von Inventaren im Rahmen der Buchung des Anlagevermögens in der Finanzbuchhaltung?",
+                "nameVisible": true,
+                "description": "",
+                "slots": [
+                  {
+                    "id": "aff900c47623bef96f70f47078fced23d8749cf973404d3679d2acf0885227c5",
+                    "type": "string",
+                    "kind": "static",
+                    "reference": "choice",
+                    "label": "Choice"
+                  }
+                ],
+                "block": {
+                  "type": "tripetto-block-multiple-choice",
+                  "version": "5.0.3",
+                  "choices": [
+                    {
+                      "id": "2ae2ff4f2a3577f6eac5f3ef71842edd7bad489354d2163efa80dd14c9df78a0",
+                      "name": "Ja"
+                    },
+                    {
+                      "id": "e23528c1a2dcdfa084791a33256d7f5242db20b7688fe147a6ae6b1dba427c02",
+                      "name": "Nein"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "builder": { "name": "tripetto", "version": "4.3.2" }
+      },
+      "hooks": null,
+      "readToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidE45SE0yTXFhQnBSRnJLVFlJenFmYkRIelNGY0JabWpVb0tlRFRId1NOdz0iLCJkZWZpbml0aW9uIjoiV2YvclYvdHZqd1RxRVlxZEtaZkp1TUF5eDJncUxIVEY2RVl6U1cwOEJJUT0iLCJ0eXBlIjoiY29sbGVjdCJ9.Ogp7K0s0XQonFYnj52_Jb7lgXVNzMa8_phAaQo_GZks",
+      "readTokenAlias": "VSMNLV44TG",
+      "runner": "autoscroll",
+      "styles": {
+        "direction": "vertical",
+        "verticalAlignment": "middle",
+        "hidePast": true,
+        "hideUpcoming": true,
+        "showNavigation": "auto",
+        "showProgressbar": false,
+        "showEnumerators": false,
+        "autoFocus": false,
+        "showSeparateSubmit": true,
+        "showPreviousButton": true,
+        "hideRequiredIndicator": false,
+        "showScrollbar": false,
+        "disableScrolling": false,
+        "noBranding": false,
+        "contract": { "name": "tripetto-runner-autoscroll", "version": "5.1.6" }
+      },
+      "l10n": {},
+      "trackers": null,
+      "tier": null,
+      "__typename": "Definition"
+    }
+  }
+}
