@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Row, Col, Layout, Checkbox, Space } from "antd";
 import { ArrowDownOutlined, UpOutlined, DownOutlined, ArrowUpOutlined,CheckOutlined } from "@ant-design/icons";
 import "../start/styles.css";
-import questions from "../../questions_mod.json";
+import questions from "../../questions.json";
 import { Radio } from "antd";
 
 function Question() {
@@ -21,8 +21,8 @@ const onChangeChecked=(checkedValues)=> {
   setcheckedValues(checkedValues);
 }
 const [myArr,setmyArr]=useState([0]);
-  let data = questions.questions.steps;
-  const [radioOption,setRadiooption]=useState(''); 
+  let data = questions.questions;
+  const [radioOption,setRadiooption]=useState('');
   const [buttonOption,setButtonoption]=useState('');
   console.log(data);
   const [question,setQuestion]=useState(0);
@@ -35,10 +35,10 @@ const [myArr,setmyArr]=useState([0]);
       arr.push(i);
     }
   }
-  
+
   console.log('pages:')
   const moveForward=()=>
-  { 
+  {
     // setOption('');
     // setButtonoption('');
     // setRadiooption('');
@@ -59,7 +59,7 @@ const [myArr,setmyArr]=useState([0]);
       {
         setQuestion(data[question].mustChild-1);
         setmyArr([...myArr, data[question].mustChild-1]);
-        
+
       }
       else
       {
@@ -72,7 +72,7 @@ const [myArr,setmyArr]=useState([0]);
           setQuestion(data[question].mustChild-1);
         setmyArr([...myArr, data[question].mustChild-1]);
         }
-        
+
       }
     }
     console.log("question_parent",question);
@@ -104,15 +104,15 @@ const [myArr,setmyArr]=useState([0]);
     //       console.log("questionID",optionLocation["id"]-1);
     //       setQuestion(optionLocation["id"]-1);
     //   }
-     
+
     // }
-    
-    
-    
-    
-    
-    
-      
+
+
+
+
+
+
+
   }
   const onChange=(e)=> {
     console.log(`radio checked:${e.target.value}`);
@@ -140,7 +140,7 @@ const [myArr,setmyArr]=useState([0]);
                                     : "start_title"
                                 }>
           <div className="question-container">
-            
+
           {myArr.length===1 && myArr[0]===0?(
          <Button
          type="link"
@@ -161,7 +161,7 @@ const [myArr,setmyArr]=useState([0]);
       >
         Back
       </Button>)}
-      
+
             <h2 className="question">
               {data[question].question}
               <span>{data[question].required===true?(<span style={{color:"red"}}>*</span>):null}</span>
@@ -172,13 +172,13 @@ const [myArr,setmyArr]=useState([0]);
               <div className="single-question-container">
                  <Radio.Group onChange={onChange} size="large" buttonStyle="solid" value={radioOption}>
                       {arr.map(i=><Radio.Button className="radio-tab" value={i}>{i}</Radio.Button>)}
-                      
+
                 </Radio.Group>
                 {/* <Row justify="start">
                 <Col span={4}>col-4</Col>
       <Col span={4} offset={1}>col-4</Col>
       <Col span={3} offset={2}>col-4</Col>
-      
+
     </Row> */}
     <div className="eqi-container">
       {data[question].scaleMark.map(scaleMark=>(<div className="class-mark">{scaleMark}</div>))}
@@ -189,7 +189,7 @@ const [myArr,setmyArr]=useState([0]);
               <div>
                 {data[question].type==="multiple-choice"?(
                   <div className="multiple-choice-container">
-                  
+
                      <Radio.Group
                     //  value={option.option}
                     //  onChange={onChange}
@@ -208,8 +208,8 @@ const [myArr,setmyArr]=useState([0]);
                     </Radio.Button>)}
                      </Space>
                    </Radio.Group>
-                 
-               
+
+
           </div>
                 ):(<div>{data[question].type==="checkbox"?(
                   <div>
@@ -218,10 +218,10 @@ const [myArr,setmyArr]=useState([0]);
                      <Checkbox.Group style={{ width: '100%',fontSize:"25px" }} onChange={onChangeChecked}>
                        {data[question]["checkbox-options"].map(option=>
                         <Col span={24}>
-                          
+
                         <Checkbox
                         value={option.option}
-                      
+
                           // onChange={(e) => {
                           //   let newArray = [...answer];
                           //   let d = newArray.filter(function (x) {
@@ -247,7 +247,7 @@ const [myArr,setmyArr]=useState([0]);
                         >
                           {option.option}
                         </Checkbox>
-                        
+
 
                       </Col>
 )}
@@ -260,8 +260,8 @@ const [myArr,setmyArr]=useState([0]);
                    <div className="matrix-index-title">
                      {data[question].labels.map(label=><span className="matrix-index">{label.labelId}</span>)}
                      </div>
-                    
-                    
+
+
                        {data[question]["matrix-options"].map(matrix=> <div className="matrix-radio-container"><p className="matrix-radio-option-title">{matrix.option}</p> <p className="radio-space"></p>
                       <Radio.Group
                         // onChange={(e) => {
@@ -286,12 +286,12 @@ const [myArr,setmyArr]=useState([0]);
                                 className="matrix-radio"
                                 value={label.labelId}
                               ></Radio>)}
-                              
+
                             {/* );
                           }
                         )} */}
                       </Radio.Group></div>)}
-                      
+
 
 </div>
                 ):(<div>{data[question].type==="submit"?(
@@ -309,7 +309,7 @@ const [myArr,setmyArr]=useState([0]);
                 ):(
                   <div></div>
                 )}</div>)}
-                
+
 </div>
                 )}
 
@@ -319,7 +319,7 @@ const [myArr,setmyArr]=useState([0]);
                 </div>)}
               </div>
             )}
-           
+
 
             {/* For Matrix Based Questions */}
 
@@ -490,7 +490,7 @@ const [myArr,setmyArr]=useState([0]);
       >
         Back
       </Button>)}
-         
+
               </Col>
               <Col span={4}> */}
                 <div>
@@ -515,7 +515,7 @@ const [myArr,setmyArr]=useState([0]);
                    Next
                  </Button>
                 )}</>
-                  
+
                 ):(
                   <Button
                    type="primary"
@@ -526,7 +526,7 @@ const [myArr,setmyArr]=useState([0]);
                    Next
                  </Button>
                 )}</>
-                   
+
                 ):(
                   <Button
                   type="primary"
@@ -538,12 +538,12 @@ const [myArr,setmyArr]=useState([0]);
                 </Button>
                 )}
                 </div>
-              
+
              {/* </Col>
     </Row> */}
-    
+
           </div>
-         
+
         </Col>
       </Row>
 
