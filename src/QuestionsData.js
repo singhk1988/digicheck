@@ -1,4 +1,4 @@
-import questionsJson from './questions_mod.json';
+import questionsJson from './questions.json';
 
 export default class QuestionsData {
   constructor() {
@@ -7,7 +7,7 @@ export default class QuestionsData {
   }
 
   getQuestion(qid) {
-    return this._questions.find((q)=>(q.id == qid));
+    return this._questions.find((q)=>(q.id === qid));
   }
 
   getFirstQuestion() {
