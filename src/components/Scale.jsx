@@ -7,10 +7,9 @@ function Scale(props) {
     return (
         <>
             <div className="single-question-container">
-                <Radio.Group size="large" buttonStyle="solid" >
-                    {props.arr.map(i => <Radio.Button onClick={props.handleScale} className="radio-tab"  value={i}>{i}</Radio.Button>)}
+                <Radio.Group size="large" buttonStyle="solid" defaultValue={props.value}>
+                    {props.arr.map(i => <Radio.Button onClick={props.handleScale} className="radio-tab" value={i.toString()}>{i}</Radio.Button>)}
                 </Radio.Group>
-
                 <div className="eqi-container">
                     {props.scaleMark.map(scaleMark => (<div className="class-mark">{scaleMark}</div>))}
                 </div>

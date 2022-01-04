@@ -11,6 +11,7 @@ function Choice(props) {
                 <Radio.Group
                     buttonStyle="solid"
                     size="large"
+                    defaultValue={props.value}
                 >
                     <Space direction="vertical">
                         {props.options.map(option => <Radio.Button className='multi-choice' onClick={(e)=>props.handleChoice(e, option.childID)} key={option.childID} value={option.option}>

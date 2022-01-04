@@ -9,12 +9,9 @@ import Matrix from "./Matrix";
 import QuestionsData from "../QuestionsData";
 
 
-function QuestionInput({ arr, question, handleOnChange }) {
-    const [checkValues, setCheckValues] = useState([]);
+function QuestionInput({ arr, question, value, handleOnChange }) {
 
     function handleScale(e) {
-        // questionData.setAnswer(currentQid, e.target.value);
-        // setCurrentQid(currentQuestion.childID);
         handleOnChange(e.target.value, question.childID)
     }
 
@@ -22,54 +19,41 @@ function QuestionInput({ arr, question, handleOnChange }) {
         handleOnChange(e.target.value, key)
     }
 
-    const onChangeCheckBox = (ans)=> {
-        setCheckValues(ans)
-        console.log(checkValues)
-    }
-
-    function handleCheckBox() {
-        // handleOnChange(checkValues, question.childID)
-        console.log("checkbox dismounted", checkValues)
-    }
-
-
-    function handleMatrix(ans) {
-  
-        // questionData.setAnswer(currentQid, ans);
-        // setCurrentQid(currentQuestion.childID)
+    function handleCheckBox(ans) {
         handleOnChange(ans, question.childID)
     }
-    
+
+    function handleMatrix(ans) {
+        handleOnChange(ans, question.childID)
+    }
 
     if (question.type === "scale") {
-        return  <Scale arr={arr} handleScale={handleScale} scaleMark={question.scaleMark} />
+        return <Scale value={value} arr={arr} handleScale={handleScale} scaleMark={question.scaleMark} />
     }
 
     else if (question.type === "multiple-choice") {
-        return  <Choice handleChoice={handleChoice} options={question.options} />
+        return <Choice value={value} handleChoice={handleChoice} options={question.options} />
     }
 
     else if (question.type === "checkbox") {
-        return  <CheckBox 
-                    handleCheckBox={handleCheckBox} 
-                    checkboxOptions={question["checkbox-options"]}
-                    // checkValues={checkValues} 
-                    // setCheckValues={setCheckValues}
-                    onChangeCheckBox = {onChangeCheckBox}
-                />
-            
+        return <CheckBox
+            value={value}
+            checkboxOptions={question["checkbox-options"]}
+            handleCheckBox={handleCheckBox}
+        />
+
     }
 
     else if (question.type === "matrix") {
-        return  <Matrix labels={question.labels} matrixOptions={question["matrix-options"]} handleMatrix={handleMatrix} />
+        return <Matrix value={value} labels={question.labels} matrixOptions={question["matrix-options"]} handleMatrix={handleMatrix} />
     }
 
     else if (question.type === "submit") {
-        return  <Button type="primary" style={{ backgroundColor: "#008000", marginBottom: "14px" }} icon={<CheckOutlined />}>Submit</Button>
-        
+        return <Button type="primary" style={{ backgroundColor: "#008000", marginBottom: "14px" }} icon={<CheckOutlined />}>Submit</Button>
+
     }
 
-    else{
+    else {
         return <></>
     }
 }
@@ -78,6 +62,7 @@ function Question() {
 
     const questionData = React.useMemo(() => new QuestionsData(), []);
     const [currentQid, setCurrentQid] = useState(1);
+    const [currentAns, setCurrentAns] = useState();
     const currentQuestion = questionData.getQuestion(currentQid);
 
     const arr = [];
@@ -87,56 +72,50 @@ function Question() {
         }
     }
 
-    function handleBackward() {
-        console.log("handleBackward Clicked");
+    function handleBack() {
         let tempId = questionData.popAnswer()
-        setCurrentQid(tempId.id)
+        setCurrentQid(tempId.id);
+        setCurrentAns(tempId.value);
     }
 
-    function handleForward() {
-        if(currentQuestion.type === "text"){
-            questionData.setAnswer(currentQid, null);
-            setCurrentQid(currentQuestion.childID);
-
-        }
-        else{
-            setCurrentQid(currentQuestion.childID);
-        }
+    function setAndGoForward(qid, ans, nextChildID) {
+        questionData.setAnswer(qid, ans);
+        setCurrentQid(nextChildID);
+        setCurrentAns(null);
     }
 
-    const handleOnChange = (ans, id)=>{
-        questionData.setAnswer(currentQid, ans);
-        if(currentQuestion.type === "scale" || currentQuestion.type === "multiple-choice"){
-            setCurrentQid(id);
-        }
+    function handleNext() {
+        setAndGoForward(currentQid, currentAns, currentQuestion.childID);
     }
 
-
-    // console.log(questionData);
+    const handleOnChange = (ans, nextChildID)=>{
+        if(!nextChildID) {
+            nextChildID = currentQuestion.childID;
+        }
+        if(!currentQuestion.nextButton) {
+            setAndGoForward(currentQid, ans, nextChildID);
+        } else {
+            setCurrentAns(ans);
+        }
+    }
 
     return (
         <div>
             <div className="question-container">
-                {currentQuestion.backButton ? <Button type="link" onClick={handleBackward} className="back" icon={<ArrowUpOutlined />}>Back</Button> : null}
+                {currentQuestion.backButton ? <Button type="link" onClick={handleBack} className="back" icon={<ArrowUpOutlined />}>Back</Button> : null}
                 <h2 className="question">{currentQuestion.question}</h2>
                 <h3>{currentQuestion.description}</h3>
                 <QuestionInput
+                    key={currentQuestion.id}
                     arr={arr}
                     question={currentQuestion}
-                    // handleBackward={handleBackward}
-                    // handleForward={handleForward}
+                    value={currentAns}
                     handleOnChange={handleOnChange}
-                    // handleScale={handleScale}
-                    // handleChoice={handleChoice}
-                    // handleCheckBox={handleCheckBox}
-                    // handleMatrix={handleMatrix}
                 />
-                {currentQuestion.nextButton ? <Button type="primary" onClick={handleForward} icon={<ArrowDownOutlined />}>Next</Button> : null}
+                {currentQuestion.nextButton ? <Button type="primary" onClick={()=>handleNext()} icon={<ArrowDownOutlined />}>Next</Button> : null}
             </div>
-
         </div >
-
-    )
+    );
 
 }
 

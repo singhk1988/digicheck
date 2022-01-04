@@ -6,24 +6,10 @@ import '../styles/style.css'
 
 
 function CheckBox(props) {
-
-  // const [checkValues, setCheckValues] = useState([]);
-
-  // function handleOnChange(e) {
-  //   // setCheckValues(e);
-  //   props.handleCheckBox(e)
-  // }
-
-  useEffect(()=>{
-    return () =>{
-      props.handleCheckBox()
-    } 
-  }, [])
-
   return (
     <>
       <div className="single-question-container">
-        <Checkbox.Group style={{ width: '100%', fontSize: "25px" }} onChange={props.onChangeCheckBox}>
+        <Checkbox.Group defaultValue={props.value} style={{ width: '100%', fontSize: "25px" }} onChange={props.handleCheckBox}>
           {props.checkboxOptions.map(option =>
             <Col span={24}>
 
@@ -35,7 +21,6 @@ function CheckBox(props) {
           )}
         </Checkbox.Group>
       </div>
-      {/* <Button type="primary" onClick={() => props.handleCheckBox(checkValues)} icon={<ArrowDownOutlined />}>Next</Button> */}
     </>
   )
 }

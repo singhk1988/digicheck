@@ -1,3 +1,10 @@
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px 0;
+}
+
 .footer {
   bottom: 0px;
   position: fixed;
@@ -61,8 +68,6 @@
   margin-top: 15%;
 }
 .question-container {
-  margin-left: 20%;
-  margin-right: 20%;
 }
 .radio-tab {
   padding: 5px 15px 35px 15px;
@@ -70,7 +75,7 @@
   font-weight: 600;
 }
 @media only screen and (max-width: 767px) {
-  .start_title 
+  .start_title
   {
     margin-top: 28%;
   }
@@ -96,7 +101,7 @@
   .ant-checkbox-wrapper {
     font-size: 14px !important;
   }
-  /* .matrix-radio-option-title 
+  /* .matrix-radio-option-title
   {
     margin-right: 60px;
   } */
@@ -132,7 +137,7 @@
     width:89%;
     max-width: 100%;
   } */
-} 
+}
 @media only screen and (min-width: 1022px) and (max-width:1036px)
 {
   /* .radio-tab{
@@ -146,7 +151,7 @@
   {
     margin-top: 5%;
   }
-} 
+}
 
 .ant-btn-primary {
   color: #fff;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Question from './components/Questions.jsx'
-import './App.css'
+import './styles/style.css';
 
 
 function App() {
