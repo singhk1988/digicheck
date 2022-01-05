@@ -1,4 +1,4 @@
-import questionsJson from './questions.json';
+import questionsJson from './Questions.json';
 
 export default class QuestionsData {
   constructor() {
