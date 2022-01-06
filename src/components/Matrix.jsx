@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/style.css';
 import { Radio } from "antd";
-import { Button } from "antd";
-// import { ArrowDownOutlined } from '@ant-design/icons';
 
 function Matrix(props) {
     const [ans, setAns] = useState({});
@@ -28,7 +26,6 @@ function Matrix(props) {
                         <span className="matrix-index">{label.labelId}</span>)
                 }
             </div>
-
 
             {props.matrixOptions.map(matrix => {
                 let defaultValue = props.value && props.value[matrix.option];

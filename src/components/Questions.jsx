@@ -59,7 +59,6 @@ function QuestionInput({ arr, question, value, handleOnChange }) {
 
     else if (question.type === "submit") {
         return <Button type="primary" style={{ backgroundColor: "#008000", marginBottom: "14px" }} icon={<CheckOutlined />}>Submit</Button>
-
     }
 
     else {
@@ -70,7 +69,7 @@ function QuestionInput({ arr, question, value, handleOnChange }) {
 function Question() {
 
     const questionData = React.useMemo(() => new QuestionsData(), []);
-    const [currentQid, setCurrentQid] = useState(54);
+    const [currentQid, setCurrentQid] = useState(1);
     const [currentAns, setCurrentAns] = useState();
     const currentQuestion = questionData.getQuestion(currentQid);
 
