@@ -15,12 +15,21 @@ function QuestionInput({ arr, question, value, handleOnChange }) {
         handleOnChange(e.target.value, question.childID)
     }
 
-    function handleChoice(e, key) {
-        handleOnChange(e.target.value, key)
+    function handleChoice(value, childID) {
+        handleOnChange(value, childID)
     }
 
     function handleCheckBox(ans) {
-        handleOnChange(ans, question.childID)
+        let childId = question.childID;
+        if(question.optionChild){
+            if(ans.indexOf(question.optionChecked)>-1){
+                childId=question.optionChild;
+            } else{
+                childId=question.mustChild;
+            }
+        }
+
+        handleOnChange(ans, childId)
     }
 
     function handleMatrix(ans) {
@@ -50,7 +59,6 @@ function QuestionInput({ arr, question, value, handleOnChange }) {
 
     else if (question.type === "submit") {
         return <Button type="primary" style={{ backgroundColor: "#008000", marginBottom: "14px" }} icon={<CheckOutlined />}>Submit</Button>
-
     }
 
     else {
@@ -91,6 +99,8 @@ function Question() {
     const handleOnChange = (ans, nextChildID)=>{
         if(!nextChildID) {
             nextChildID = currentQuestion.childID;
+        } else{
+            currentQuestion.childID = nextChildID;
         }
         if(!currentQuestion.nextButton) {
             setAndGoForward(currentQid, ans, nextChildID);
@@ -98,6 +108,8 @@ function Question() {
             setCurrentAns(ans);
         }
     }
+
+    console.log(questionData)
 
     return (
         <div>
